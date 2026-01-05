@@ -7,7 +7,7 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -OverTheWire (Linux)
 
-  -Introduction to Cubersecurity by Cisco
+  -Introduction to Cybersecurity by Cisco
 
   -TryHackMe (Courses + Labs)
 
