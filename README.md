@@ -17,7 +17,7 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Cisco CyberOps Associate
 
- -Microosft Cybersecurity Architect
+ -Microsoft Cybersecurity Architect
 
  -Microsoft Security Opeartions Analyst
 
