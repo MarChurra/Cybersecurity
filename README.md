@@ -3,7 +3,7 @@ My own notes for my learning journey in cybersecurity
 
 For anyone interested, I will be following these courses, before attempting COMPTIA Security + 
 
-  -Review Network + Study Content (better networking fundamentals)
+  -Review Network+ Study Content (better networking fundamentals)
 
   -OverTheWire (Linux)
 
