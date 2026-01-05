@@ -5,9 +5,7 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Review Network + Study Content (better networking fundamentals)
 
-   -OverTheWire (Linux)
-  
-  -Microsoft´s Fundamentals to Cybersecurity
+  -OverTheWire (Linux)
 
   -Introduction to Cubersecurity by Cisco
 
@@ -17,8 +15,8 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Cisco CyberOps Associate
 
- -Microsoft Cybersecurity Architect
+  -Microsoft Cybersecurity Architect
 
- -Microsoft Security Opeartions Analyst
+  -Microsoft Security Opeartions Analyst
 
--Setup of an Homelab for SOC operations demo
+  -Setup of an Homelab for SOC operations demo
