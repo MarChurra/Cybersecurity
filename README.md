@@ -1,2 +1,24 @@
-# Cybersecurity
-Notes for my learning journey in cybersecurity
+# Cybersecurity Journal
+My own notes for my learning journey in cybersecurity
+
+For anyone interested, I will be following these courses, before attempting COMPTIA Security + 
+
+  -Review Network + Study Content (better networking fundamentals)
+
+   -OverTheWire (Linux)
+  
+  -Microsoft´s Fundamentals to Cybersecurity
+
+  -Introduction to Cubersecurity by Cisco
+
+  -TryHackMe (Courses + Labs)
+
+  -HackTheBox (Labs) 
+
+  -Cisco CyberOps Associate
+
+ -Microosft Cybersecurity Architect
+
+ -Microsoft Security Opeartions Analyst
+
+-Setup of an Homelab for SOC operations demo
