@@ -15,8 +15,6 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Cisco CyberOps Associate
 
-  -Microsoft Cybersecurity Architect
-
-  -Microsoft Security Opeartions Analyst
+  -Microsoft Security Operations Analyst
 
   -Setup of an Homelab for SOC operations demo
