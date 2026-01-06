@@ -17,4 +17,67 @@
           2. The protection of information in each of its possible states. (Processing, Storage, Transmission)
           3. The security measures used to protect data. (Awareness, training and education, Technology, Policy and Procedure)
 
+
+  Type of Cyber Attackers:
+    
+          1. White Hat (break into networks or computer systems to identify weaknesses, and are done with prior permission, with reported results back to the owner)
+          2. Gray Hat (Can set out to find vulnerabilities in a system but they will only report their findings if doing so coincides with their agenda. Or they might even publish details about the vuilnerability on the internet so that other attackers can exploit it.)
+          3. Black Hat (Take advantage of known vulnerabilities for ilegal personal, financial or political gain)
+
+      They can be:
+
+          1. Amateurs (script kiddies)
+          2. Hackers 
+          3. Organized Hackers (cyber criminals, hacktivists, terrorists and state-sponsored hackers)
+
+
+  Cyberwarfare: The use of technology to penetrate and attack another nation´s network and systems, in an effort to cause damage or disurption.
+                Its main purpose is to gain advantage over advesaries, wheter they are nations or competitors.
+
+                    -Gathers information and defense secrets
+                    -To impact another nation´s infrastructure
+
+  
+  Malware: Malicious software, which is any piece of code that can be used to steal data, bypass access controls, or cause harm to or compromise a system. Knowing what the different types are and how they speard is key to containing and removing them.
+
+  Types of Malware:
+
+      -Spyware (Designed to track and spy a user online activity. Often bundled with legitimate software or Trojan Horses.)
+
+      -Adware (Often installed with some versions of software and is designed to automatically deliver advertisements to a user, most often on a web browser. Often comes with spyware.)
+
+      -Backdoor (Used to gain unauthorized access by bypassing the normal authentication procedures to access a system. Hackers can gain remote access to resources within an application and issue remote system commands. Works in the background as difficult to detect.)
+
+      -Ransomware (Designed to hold a system or the data it contains captive, until a payment is made. It usually works by encrypting your data so that you can´t access it. usually comes with phising emails or via a software vulnerability.)
+
+      - Scareware (Uses scare tactis to trick you into taking a specific action. Scareware mainly consists of opearting system style windows that pop up to warn you that your system is at risk and needs to run a specific program for it to reutrn to normal, which is the infected software.)
+
+      -Rootkit (Designed to modify the operating system to create a backdoor, for attackers to gain access to a computer remotely. They take advantage of software vulnerabilities to gain access to resources with privilege escalation, and modify system files.)
+
+      -Virus (A type of computer program that, when executed, replicates and attaches itself to othe executable files, such as a document, by inserting its own code. Most of them require end-user interaction to initiate activation and can be written to act on a specific date or time.)
+
+      -Trojan Horse (Malware that carries out malicious operations by masking its true intent. It might appear legitimate but is, in fact, very dangerous. Exploits user privileges and are most ofen found in image files, audio file or games. They do not self-replicate but act as a decoy to sneak malicious software past users)
+
+      - Worms (A type of malware that replicates itself in order to spread from one computer to another. Unlike a virus, which requires an host program to run, worms run by themselves. Other than the initial infection of the host, they do not require user input and can spread quickly over the network. They exploit system vulnerabilities, have a way to propagate themselves and they all contain malicious codes, a payload, that causes damage to computer systems or networks.)
+
+
+  Symptoms of Malware:
+
+      -An abnormal increase in the CPU load
+
+      -Computer freezing or crashing often
+
+      -decrease in web browsing speed
+
+      -Unexplainable problems with your network connections
+
+      -Modified or deleted files
+
+      -The presence of unknown files, programs or desktop icons
+
+      -Strange unknown processes running
+
+      - Programs turning off or reconfiguring themselves
+
+      - Emails being sent without your knowledge or consent
       
