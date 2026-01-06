@@ -1,0 +1,30 @@
+LAN(Local Area Network): Physical connected network, spanning a smaller geographical area.
+                         Most commonly implemented technology is via Ethenet, however it is not limited to it.
+                         The Nodes in a LAN are directly connected to one another by cable or short range wireless.
+                         Does not require a line to be leased from a service provider.
+
+LAN Administrator Duties: Manage and maintain the several devices within their network. 
+                          Handles Hardwarem Software, Deployment, Upgrades, Installation and Troubleshooting of network components.
+                          Responds to user requirements.
+
+WAN (Wide Area Network): Spans a larger geographical area, and often multiple areas.
+                         Connects multiple Local Area networks together.
+                         Utilizes Long Range Communications such as Satellite, or Radio Frequency.
+                         Can be private, such as international corporation, or public. The largest public WAN is the internet.
+
+    Types of WANs: 
+
+        -PAN (Personal Area Network)
+
+        -CAN (Campus Area Network)
+
+        -MAN (Metropolitan Area Network)
+
+        -GAN (Global Area Network)
+
+        -EN (Enterprise Network)
+
+
+WAN Administrator Duties: More specialized work, focused on Network oriented tasks, rather then user oriented tasks.
+                          Developing and programming scripts for network task automation.
+                          Testing and implementing software and hardware upgrades, network wide. 
