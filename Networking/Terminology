@@ -1,0 +1,21 @@
+Network: Interconnected computers, that pass data electronically between each other. 
+
+Node: Any kind of device connected in the network
+
+    Endpoint Node: Receives Data
+
+    Redistribution Node: Passes data to an Node
+
+Network Composition: Devices, Media (Wireless, Wired), Adapter, Netowrk Operating System
+
+Network Backbone: Infrastructure that carries the network, joining the smaller networks together.
+
+  Types of backbones:
+
+      -Serial: Single cable backbone, connecitng multiple swtiches.
+
+      -Hierarchical/distributed: Similiar to a family tree.
+
+      -Collapsed: Managed by a single Router.
+
+      -Parallel: Similar to collapsed, but with redundancy.
