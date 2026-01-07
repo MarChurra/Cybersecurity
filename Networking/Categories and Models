@@ -28,3 +28,30 @@ WAN (Wide Area Network): Spans a larger geographical area, and often multiple ar
 WAN Administrator Duties: More specialized work, focused on Network oriented tasks, rather then user oriented tasks.
                           Developing and programming scripts for network task automation.
                           Testing and implementing software and hardware upgrades, network wide. 
+
+
+Internet: A public WAN, the largest one we have, connecting the entire globe.
+          Uses a web browser to make requests to a server, to retrieve data, via HTTP (port 80)
+          Every device connected to it has an IP address, identifying it.
+
+Intranet: A company´s private version of the internet.
+          keeps your, or portions of your network secure and segregated.
+          Uses the same services and protocols as the Internet. 
+          Accessed the same way, via a browser, with HTTP.
+
+Extranet: A portion of your network that is open to limited outsider sources.
+          Helps administrators maintain securtity to the rest of the network. Such as vendors with limited access.
+          An extension of an entity´s Intranet.
+
+Segment: A portion of a network with linked devices, separated by a connectivity device, such as a switch.
+
+Network Model: A design that defines the way that the data communicates between nodes, within an network.
+
+      -Centralized Model: Mainframe connected to terminals. The mainframe makes the entire of the processing power, displaying information via the terminals.
+
+      -Cliente / Server Model: The server is responsible for providing these services. The receiving nodes can do their own processing and still request information to the server, in opposition to the CEntralized model, where the terminals dont have their own processing power.
+
+      -Peer to Peer Network: Each node on the network is responsible for its own services and processes. Its decentralize, commonly a workgroup.  P2P connection.
+
+      -Mixed Mode Network: Combines functionalities of more than one of the three different networks. 
+          
