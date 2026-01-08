@@ -1,0 +1,55 @@
+Network Media: THe method or medium, from which data will be transmitted between nodes. Can be classificed according to the hardware or technology used.
+
+Bounded Network Media: Actual physical media. Cooper and fiber optics cables are an example.
+                      Utilizes a physical conductor such as a metal wire or a glass or plastic core cable.
+
+Copper Media: Either a single copper core, or made up of twisted pairs of copper strands.
+              Electromagnetic media.
+              Most common implementations are Coaxial (Coax) Cable and Twisted Pair Cable (such as a ethernet cable, which uses RJ-45 connection for data).
+              Has a Foil shielded by a plastic cover, that stops from EMI, disruptions to the signals being passed.
+
+Wiring Standards:
+
+              -T568/A (Less used) 
+  
+              -T568/B              
+
+STP AND UTP CABLE:
+
+            -Shielded Twisted Pair Cabling: Twisted Pair copper cabling that has a metal foil, or braided shielding surrounding the pairs. Decreates the susceptilibty of EMI.
+            More expensive than UTP and harder to workt with.
+
+            -Unshielded Twisted Pair Cabling: Does not have any protective metal coating. Very susceptible to EMI.
+                                              Less expensive and easier to work with.
+
+Twisted Pair Cabling Categories:
+
+            -Cat: Category
+
+            -CAT1: Voice only, outdaded.
+
+            -CAT2: Rare today. Token based networks only. Outdaded.
+
+            -CAT3: Ethernet 10MBps. Voice Traffic. Estabilished by TIA/EIA
+
+            -CAT4: Surpseded by CAT5. Rarely used
+
+            -CAT5: Fast ethernet, up to 100MBps, 100Mhz. frequency. 
+
+            -CAT5e: 100Mhz Frequency. Addressed CrossTalk Issues, goes up to 350MBPs. 
+
+            -Cat6: Gigabit Ethernet 1GBPs Data Rate 200-250MHz
+
+            -CAT6A: Augmented Cat6. Greater than 1GBPs - 10GBPS 500MHZ 
+
+            -CAT7: 10Gigabit Ethernet. Upwards of 10GBPS+ speeds. 600MHZ
+
+            -All Cables have a Max Cable Length of 100 Meters, from Cat3 to Cat7 
+
+
+Coaxial Cabling: Single Copper Core, covered by a Non-Conductive Insulated Coating, covered by a Braided Metal Shielding of Cooper or Steel, defending from EMI and letting him be Grounded. Covered by  Outer Plastic Sheating.
+
+Coax Cable Types:
+
+            -RG58/U -- Ethernet, Solid Core, 50 ohms impedance - 5mm
+  
