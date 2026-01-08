@@ -1,0 +1,55 @@
+Topology: Describes the arrangement or layout of a communications network
+          Lines out the path data communication will take. Allows administrators to understand how the devices are connected to the network.
+
+Types of Topologies:
+
+          -Physical: How the devices are actually connected to one another physically. The blueprint or shape of the network.
+
+          -Logical: Describes the pathway data will take, regardless of the physical connection.
+                    Allows admins troubleshoot a problem with communication in transit by understand the path data is taking.
+                    Could be very different from the phyiscal Topology.
+
+Network Connections:
+
+          Point to Point connections: A direct connection between two nodes on a network.
+
+          Multipoint Connections: Nodes on a network that are connected to two or more nodes simultaneously. Signals are not private in Multipoint connections. 
+
+          Radiated Connections: A wireless connection that is either Point To Point, or Multipoint. Also considered a Broadcast connection.
+
+
+Physical Bus Topology :Each node is connected on a single line (Multipoint Connection). 
+                      A message that is sent for one node, is a Unicast.
+                      A message to several nodes, is a Multicast.
+                      If it goes to all nodes, it is a Broadcast. 
+                      When data is transmited, the signal will bounce between the ends. A Terminator (stops at 50 ohm) stops the transmission when unneded, to prevent a bounce of the data.
+                      The nodes are connected to the cable via a T Connector.
+
+
+Physical Star Topology: Everything is connected to a central connection device (Switch or HUB), in the shape of a star.
+                        The data goes from the node to the switch, and sends the data to the inteded node to receive the data.
+                        An hub sends the data as an broadcast.
+                        Each node is independent of the othe nodes in the network, so if one client node fails, it does not affect the others in the network. The Single Point of Failure is on the HUB or Switch.
+
+
+Physical Ring Topology:  Sends data Upstream and Downstream to its Neighbors Only. The flow os data is unidrectional.
+                         The transmission is guaranted and stronger, since eahc node acts as an booster. A failure on a node shuts down the network.
+
+
+Physical Tree Toplogy: Resembles the structure of a tree. Data is sent from the Parent Nodes to its children. Data can be sent from the parent to the children, or between brother nodes.
+                       The Root is the Root Node. It goes below on levels.
+                       Branching factor (level of nodes). So a branching factor of 3 is similar of going down 3 levels, meaning data will take longer to arrive, in comparison to a factor of 2).
+                       Isolates the connection per section, for troubleshooting purposes. 
+                       Its scalable.
+
+Physical Mesh Topology: Every node on the network is interconnected to each other. Each connnection is similiar to a Point to Point connection, making the transfer of data quick. 
+                        Its harder to maintain and manage.
+                        A partial mesh is when only certain portions of this network have a direct connection, making it simpler and cheaper to install.
+                        Has high redundancy and efficiency.
+
+Hybrid Topology: Usually created out of necessity, and are rather difficult to maintain and manage, since each topology in the hybrid has its own maintenanced.
+                 For example, a Star-Bus Hybrid, where two Physical Stars are connected via a Bus. You also have a Star of Stars Hybrid.
+
+Logical Bus, Ring and Star Topologies: In this case, the Physical Topology is a star and the data is being sent on a logical bus.
+                                       Data is sent in a linear fashin, such as a Bus, despite the layout being a Star physical.
+                                                                              
