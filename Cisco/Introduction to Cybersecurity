@@ -80,4 +80,76 @@
       - Programs turning off or reconfiguring themselves
 
       - Emails being sent without your knowledge or consent
-      
+
+
+Methods of Infiltration:
+
+        Social Engineering: The manipulation of people into performing actions or divulding confidential information. They often rely on people´s willingess to be helpful, but they also prey on their weaknesses. For example, an attacked will call an authorized employee with an urgent problem that requires immediate network access and appeal to his vanity or greed, or invoke authority by using name-dropping techniques, in order to gain access.
+                            
+        Denial-of-Service: These attacks are a type of netowrk attach that is relatively simple to carry out, even by an unskilled attacked. A DoS attack results in some sort of interruption of network service to users, devices or applications.
+
+                                -Overwhemling quanity of traffic.
+                                -Maliciously formatted packets.
+
+        Distributed DoS: A similiar to a DoS attack but originates from multiple, coordinated sources. For example:
+                         An attacker builds a network (botnet) of infected hosts called zombies, which are controlled by handler systems.
+                         The zombie computers will constantly scan and infect more hosts, creating more and more zombies.
+                         When ready, the hacker will intrusct the handler systems to make the botnet of zombies carry out a DDoS attack.
+
+      Botnet: A bot computer is typically infected by visiting an unsafe website or opening an infected email attachment or infected media file. A botnet is a group of bots, connected through the internet, that can be controlled by a malicious individual or group.
+              It can be hundreds or thousands, ro even more, of bots, that are typically controlled through a command and control server.
+              These bots can be activated to distribute malware, launch DDoS attacks, distribute spam email, or execute brute-force password attacks.
+              Many organizations, like Cisco, force network activities through botnet traffic filters, to identify any botnet locations.
+
+
+      On-Path Attacks: On-path attackers intercept or modify communications between two devices, such as a web  browser and a web server, either to collect information from or to impersonate one of the devices.
+                       This type of attack is also referred to as aa man-in-the-middle or man-in-the-mobile attack.
+    
+     
+      SEO Poisoning: Use SEO to push malicious websites to the front
+
+      Wi-Fi Password Cracking: 
+
+      Password Attacks: Entering a username and password is one of the most popular forms of authenticated to a web site. Attackers try to uncover a password in order to gain access.
+
+                              -Password spraying:Sprays a few commonly used paswords across a large number of accounts. 
+
+                              -Dictionary attacks: A hacker systematically tries every word in a dictionary or a list of commonly used words as a password in an attempt to break into a password-protected account.
+
+                              -Brute-Force Attacks: The simplest and most commonly used way of gaining access to a password-protected site, brute-force attacks see an attacked using all possible combinations of letters, numbers and symbols in the password space until they get it right.
+
+                              -Rainbow Attacks: Passwords in a computer system are not stored as a plain text, but as hashed values. A rainbow table is a large dictionary of precomputed hashes and the passwords from which they were calculated. This attack compares the hash of a password with those stored in the rainbow table. If a match is found, they identify the password used to create the hash.
+
+                              -Traffic Interception: Plain text or unecrypted passwords can be easily read by other humans and machines by intercepting communications. If you store a password in a clear, readable text, anyone who has access can read it.
+
+    Cracking Times:
+
+    Advanced Persistent Threaths: Attackers also achieve infiltration through advanced persistent Threats (APTs) - a multi-phase, long term, stealthy and advanced operation against a specifig target. For these reasons, an individual attacker often lacks the skill set, resources or persistence to perform APTs.
+
+
+    Security Vulnerability and Exploits:
+
+        -Security vulnerabilities are any kind of software or hardware defect. A program written to take advantage of a known vulnerability is referred to as an exploit. These exploits can be used to carryy out an attack, with the goal of gaining access to a system, the data it hosts, or a specific resource.
+
+        Hardware Vulnerabilities: Most often result of hardware design flaws. They are specific to device models and are not generally eploited through random compromising attempts. They are commonly highly targeted attacks, however, traditional malware protection and good physical security are a sufficient protection for the everyday user.
+
+  Software Vulnerabilities:
+
+        -They are usually introducted by errors in the operating system or application code. 
+
+Software Vulnerabilities Categories:
+
+        -Buffer Overflow: Buffers are memory areas allocated to an application. A vulnerability occurs when data is written beyond the limits of a buffer. By chaing data beyond these boundaries, the application can access memory allocated to other processes. This can lead to a system crash or data compromised, or provide escalation of priviliges.
+
+        - Non-validaded input: Programs often require data input, but this incoming data could have malicious content, designed to force the program to behave in an unintended way.
+
+        -Race Conditions: This vulnerability describes a situation where the output of an event depends on ordered or timed outputs. A race condition becomes a source of vulnerability when the required ordered or timed events do not occur in the correct order. 
+
+        - Weaknesses in secuirty practices: System and sensitive data can be protected through techniques such as authentication, authorization and encryption. 
+
+        Access control problems: The process of controlling who does what and ranges from managing physical access to equipment to dictating who has access to a resouce, such as a file, and what they can do with it, such as read or edit. 
+
+Software Updates:
+
+      The goal of these updates is to stay current and avoid exploitation of vulnerabilities. Patches are released by the main manufacturers almost every day and applications such as browsers, mobile apps and web servers, are often updated by their companies.
+    
