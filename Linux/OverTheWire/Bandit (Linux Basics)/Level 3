@@ -1,0 +1,20 @@
+The challenge was the same, to find a password hidden inside a file in the home directory, called "--spaces in this filename--"
+
+Much like the preivous challenge, this one had a trick to it.
+
+The approach was the same, to use ls to check the presence of the file and use cat to access its content. However, the trick time was to use "\" to escape the spaces in the string of the name of the file.
+
+
+    Technologies used:
+
+        -Powershell
+
+        -SSH
+
+        -cd 
+
+        -ls / find
+
+        -cat
+
+        -Escape Characters "\"
