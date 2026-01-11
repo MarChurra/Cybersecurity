@@ -4,3 +4,14 @@ Since I was connected right away to the home directory, using "ls" was enough to
 
 After that using "cat" was enough to read the file name and progress.
 
+    Technologies used:
+
+        -Powershell
+
+        -SSH
+
+        -cd 
+
+        -ls / find
+
+        -cat
