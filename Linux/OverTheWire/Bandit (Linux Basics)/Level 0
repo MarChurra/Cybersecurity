@@ -1,0 +1,18 @@
+The games give you several challenges and require the player to crack the puzzle, in order to gain insight or the credentials needed to proceed into the next level.
+
+The first challenge is to connect via SSH to their own platform, utilizing the stated protocol.
+
+As requested by the rules of the games, these notes will state the techologies used and my reasoning behind a solution, however i wont include the complete solution.
+
+For this first exercise, while PUTTY was a viable choice, since I am currently working on a Windows environnement, I decided to connect via SSH to the host via PowerShell, for convinience sake.
+
+Via PowerShell, i had to utilize the CMD SSH, specify the Port, and fill out the remaing information.
+
+For the sake of keeping my stay in the games tidier, I also created a temporary work file in the Temp directory, via the "mktemp -d" command, in order to create a random directory, as advised by the rules.
+
+
+      Used Technologies:
+
+          -SSH
+
+          -PowerShell
