@@ -12,8 +12,6 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Junior Cybersecurity Analyst by Cisco
 
-  -Cisco CyberOps Associate
-
   -Microsoft Security Operations Analyst
 
   -TryHackMe (Courses + Labs)
