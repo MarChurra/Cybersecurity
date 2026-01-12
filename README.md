@@ -10,12 +10,14 @@ For anyone interested, I will be following these courses, before attempting COMP
 
   -Introduction to Cybersecurity by Cisco
 
-  -TryHackMe (Courses + Labs)
-
-  -HackTheBox (Labs) 
+  -Junior Cybersecurity Analyst by Cisco
 
   -Cisco CyberOps Associate
 
   -Microsoft Security Operations Analyst
 
+  -TryHackMe (Courses + Labs)
+
+  -HackTheBox (Labs) 
+  
   -Setup of an Homelab for SOC operations demo
