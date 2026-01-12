@@ -10,9 +10,11 @@ Copper Media: Either a single copper core, or made up of twisted pairs of copper
 
 Wiring Standards:
 
-              -T568/A (Less used) 
+              -T568/A (Less used. older standard used for data, voice and video) 
   
-              -T568/B              
+              -T568/B (Earlier standard including STP and UTP performance minimums as well as Fiber Optics standard. Portions of it are now obsolete.)             
+  
+              -T568&/C (Current Standard manimum for optimizing network media performance in commercial buildings. Specifies Cat6a as the media type recommended)
 
 STP AND UTP CABLE:
 
@@ -51,5 +53,103 @@ Coaxial Cabling: Single Copper Core, covered by a Non-Conductive Insulated Coati
 
 Coax Cable Types:
 
-            -RG58/U -- Ethernet, Solid Core, 50 ohms impedance - 5mm
+            -RG58/U -- Ethernet, Solid Core, 50 ohms impedance - 5mm (Thinnet) 185 meters long
+
+            -RG58/AU - Ethernet - Stranded Core - 50 ohms impedance 5mm (Thinnet) 185 meters long
+
+            -RG8 - Ethernet -- Solid Core - 50 ohms impendance - 10mm (Thicknet) 500 meters long
+
+            -RG9 - Cable TV and modems -- Stranded Core - 51 ohms impedance - 10mm
+
+            -RG62 - ARCNET- 93 ohms impedance . 5mm
+
+            -RG50 - LPVideo/ Receivers - 75ohms . 6mm
+
+            -RG6 - Cable TV signal routing - 75 ohms registers
+
+Coaxial Cables require the terminators to terminate the connection, such as in an Linear Bus Topology.
+
+
+Coax Connector Types:
+
+  -T-connector and Terminator
+
+  -T-Connector 
+
+  -Terminator
+
+
+Fiber Optic Cabling:
+
+    -Composed of a inner strengthening rod. Outside there is filler material. At the center of these strands, there is the Fiber core, either glass or plastic between 5 and 100 microns in diameter. Color coded buffer surrounding the core cladding.
+     Covered by Strengthening FIbers, typically made of strong materials, like Kevlar. The outside is protected by a Jacket.
+
+Fiber Modes:
+
+    Single Mode Fiber: Single beam of lght can pass through the core. 30Mhz Bandiwth,m Modulated in intensity to transmit data.(Good for longer distances, but shorter speed)
+
+    Step-Index-Multimode Fiber: Cladding changes the speed and velocity of the light travelling through the medium. When the velocity changes, it is called a stepdown. (short distances, but faster speed).
+
+    Graded-Index Multimode Fiber:_ Up to 2Ghz in bandwidth.
+
+
+Fiber COnnector Types:
+  
+    ST-Straight Tip: Twist cables
+
+    SC- Subscriber Connector
+
+    LC - Local Connector
+
+    MTRJ - Mechanical Transfer Registered Jack
+
+    FC- Face Contact Connector: Used in Industrial Environnements where durability is a concern. Contains a ferrule center for strength.
+
+
+Media Converters:
+
+    -Fiber to Coaxial Cable
+
+    -Multi-Mode Fiber to Ethernet
+
+    -Single-Mode Fiber to Ethernet
+
+    -Single-Mode Fiber to Multi-Mode Fiber 
+
+Structured Cabling Standards:
+
+    - Entrance Facilities: Service entrance to the buildings, the Demarcation Point and Backbone Connections. (Connection from ISP to your network)
+
+    - Backbone Wiring: Connection between Communications closets and Equipment Rooms.
+
+    -Equipment Room: Main Cross Connect (MCC), point of termination for Backbone wiring. 
+
+    -Telecommunications Closet: Contains the connection equipment for any nearby workstations, as well as connections between communication cross connects.
+
+    -Horizontal Wiring: The cabling that goes between the workstations and the Telecommunicaitons Closet.
+
+    -Work Area: Every coming form the wall to the workstation. Includes the faceplate, connectors and wiring. 
+
+
+Premise Wiring:
+
+    - Drop Cable
+
+    -Patch Panel
+
+    -Patch Cable
+
+    -IDF ( The communications connection point). Connects all the devices to the MDF (Main Distribution Frame)
+
+    -MDF 
+
+    -Wiring Closet 
+
+Plenum & PVC (For wiring cable in a building)
+
+  -PVC: Normal standard cable.
+
+  -Plenum Cable: Used in Air Handling Spaces and HVAC areas in buildings to emet Fire Code requirements
+
+  -
   
