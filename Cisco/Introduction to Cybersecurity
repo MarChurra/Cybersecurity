@@ -158,7 +158,23 @@ Cybersecurity Devices and technologies:
 
     -Routers
 
-    -Firewalls
+    -Firewalls (Designed to control or filter which communications are allowed in and which are allowed out of a device or a network. It can be a host based firewall or a standalone network device that protects an entire network of computers.)
+
+          -Network Layer Firewall (Filters commuincations based on source and destination IP addresses.)
+
+          -Transporte Layer Firewall (Filters commuincations based on source and destination data ports, as well as connection states.)
+
+          -Application Layer Firewall (Filters Communications based on an application, program or service.)
+
+          - Context Aware layer Firewall (Filters communications based on the user device, role, application type and threat profile.)
+
+          -Proxy Server (Filters web content requests like URLs, domain names and media types)
+
+          - Reverse Proxy Server (Placed in front of web servers, these protect, hide, offload and distribute access to web servers.)
+
+          -Netowrk address translation (NAT) Firewall - This firewall hides or masquerades the private addresses of network hosts.
+
+          -Host-based Firewall (Filter ports and system service calls on a single computer)
 
     -VPNs
 
