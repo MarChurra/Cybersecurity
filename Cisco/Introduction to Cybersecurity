@@ -166,11 +166,11 @@ Cybersecurity Devices and technologies:
 
           -Application Layer Firewall (Filters Communications based on an application, program or service.)
 
-          - Context Aware layer Firewall (Filters communications based on the user device, role, application type and threat profile.)
+          -Context Aware layer Firewall (Filters communications based on the user device, role, application type and threat profile.)
 
           -Proxy Server (Filters web content requests like URLs, domain names and media types)
 
-          - Reverse Proxy Server (Placed in front of web servers, these protect, hide, offload and distribute access to web servers.)
+          -Reverse Proxy Server (Placed in front of web servers, these protect, hide, offload and distribute access to web servers.)
 
           -Netowrk address translation (NAT) Firewall - This firewall hides or masquerades the private addresses of network hosts.
 
@@ -181,4 +181,52 @@ Cybersecurity Devices and technologies:
     -Antivimalware softwares
 
     -IPS (Intrusion Prevention Systems)
-    
+
+    -IDS (Intrusion Detection System)
+
+          -Security Measures deployed on a network to detect and prevent malicious activities.
+
+  
+  Port Scanning:
+
+    -In networking, each applcation runningon a device is aggined an identifier called a port number. This port is used on both ends of the transmission so that the right data is passed to the correct application. Port scanning is a proccess of probing a computer, server or other network host for open ports.
+     It can be used maliciously as a reconnaissance tool to identigy the operating system and services running on a computer or host, or it can be used by a network administrador harmlessly to verify network security policies on the network.
+
+
+  Behaviour-based Security:
+
+      A form of threat detection  that involves capturing and analyzing the flow of communication between a user on the local network and a local or remote destination. Any changes in normal patterns of behavior are garded as anormalies and may indicate an attack.
+
+          Types of behavior-based detection tools:
+
+              Honeypots: Lures the attacker in by appealing to their predicted pattern of malicious behaviour. Once the attacker is inside the honeypot, the network administrator can capture, log and analyze their behavior so that they can build a better defense.
+
+              Cisco Cyber THhreat Defense Solution Architecture: Usees indicators to provide greater visibility, context and control. The aim is to know who is carrying ouit the attack and what type of attack they ar eperforming and where, when and how the attack is taking place.
+
+    Netflow: Gathers information about data flowing through a network, including who and what devices are in the network, an d when and how users and devices access the network. 
+
+
+Penetration TEsting:
+
+    Commonly known as pen testing, its the act of assessing a computer system, network or organization for security vulnerabilities. A pen test seeks to breach systems , people, processes and code to uncover vulnerabilities which could be exploited. 
+
+Security Playbook:
+
+    A collection of repeatable queries or reports that outline a standardized process for incident-detection and response. It should:
+
+        -Highlihgt how to identify and automate the response to common threaths such as the detection of malware-infected machines, suspicious network activity or irregular authentication attempts.
+
+        -Describe and clearly define inbound and outbound traffic.
+
+        -Provide summary information including trends, statistics and counts.
+
+        -Provide usable and quick access to key statistics and metrics.
+
+        -correlate events across all relevant data sources.
+
+
+Tools for Incident Detection and Prevention:
+
+    -SIEM (Security Information and Event Management): Collects and alayzes security alerts, logs and other real-time and historical data from securitry devices on the network, to facilita early detection of cyber attacks.
+
+    -DLP (Data Loss Prevention) sustem is designed to stop sensitive data from being stolen from or espacing a network. It monitors and protects data in three different states: data in use, data in motion and data at rest.
