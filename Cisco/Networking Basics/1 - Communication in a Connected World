@@ -1,0 +1,27 @@
+The Internet is not owned by any individual or group. Hte internet is a worldwide collection of interconnected networks (internetwork or internet for short), cooperating with each other to exchange information, using common standards.
+  -Uses Telephone wires, fiber-optic cables, wireless transmissions and satellite links to allow the exchange of information.
+  -Considered a "network of networks"
+
+Local Networks:
+    -Come in different sizes. Can range from simple networks consisting of two computers, to networks connecting hundreds or thousands of devices.
+    -They are installed in small offices, homes and homes offices, these are commonly referred as SOHO (Small office/home office). These share resources sucyh as printers, documents, pictures, among others, for local users.
+
+Types of Personal Data:
+  - Voluntary Data
+  - Infered Data
+  - Observed Data
+
+Data Transmission:
+    -All of the data is composed of Bits, which are translated from human input int machine readable input.
+    -After the data is transformed into a series of bits, it must be converted into signals that can be sent across the network media to its destination.
+    -Media is the physical medium on which the signals are transmitted (copper wire, fiber-optic cable, electromagnetic waves)
+    -A signal consits of eletrical or optical patterns that are transmitted from one device to another.
+    -These patterns represent the digital bits (the data) and travel across the media from source to destination as either a series of pulses of eletrictiy, pulses of light or radio waves.
+    -Signals can be converted many times before reaching the destination, as the media changes between the source and the destiny.
+
+    Three common methods of signal transmission are:
+        -Eletrical Signals (Represents data as eletrical pulses on copper wire)
+        -Optical Signals (converts the eletrical signal into light pulses)
+        -Wireless Signals (infrared, microwave or radio waves)
+
+    -Most home and small offices used copper wires and Wi-fi. Larger networks employ fiber-optic cables.
