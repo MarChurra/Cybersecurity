@@ -25,3 +25,23 @@ Data Transmission:
         -Wireless Signals (infrared, microwave or radio waves)
 
     -Most home and small offices used copper wires and Wi-fi. Larger networks employ fiber-optic cables.
+
+Bandwith and Throughput:
+
+    Bandwidth: 
+        -High Bandwith applications, such as streaming or online games, have to be capable of transmitting and receiving bits at a very high rate.
+        -Different physical media support the transfer of bits at different speeds. The rate of data transfer is usually discussed in temrs of bandwidth and throughput.
+        -Bandwith is the capacity of a medium to carry data. Digital bandwith measures the amount of data that can flow from one place to another in a given amount of time. It is usually measured in the number of bits that can be sent across the media in a second.
+        -Common measurements are:
+            -Thousands of bits per second (Kbps)
+            -Millions of bits per second (Mbps)
+            -Billions of bits per second (Gbps)
+
+    Throughput:
+        -The measure of the transfer of bits across the media over a given period of time, much like the bandwidth. However, for several factors, it ma ynot match the specified bandwidth.
+        -The amount of data being sent and received over the connection.
+        -The types of data being transmitted. 
+        -The latency created by the number of network devices encoutered between source and destination. (The amount of time, including delays, for tdata tot ravel from one point to another.)
+        -Throughput measurements do not take into afccount the validity or usefullness of the bits being transmitted and received. Many messages received through the network are not destined for specific user applications.
+        -In an internetwork or network with several segments, throughput cannot be faster than the slowest link of the path from sending device to the receiving device. Even if all or most of the segments have high bandwith, it will only take one segment in the path with lower bandwidth to create a slowdown of the throughput of the network.
+        -While bandiwdth is the estimation of data that can flow within the network, Throughput is the traffic that is actually flowing.
