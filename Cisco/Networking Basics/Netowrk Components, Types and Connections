@@ -1,0 +1,34 @@
+-Modern communication works via a Client, that requests information to a Server. Nowadays, its common to have devices that can work as both. 
+-All computers connected to a netowrk that participate directly in network communication are classified as hostos. Hosts can send and receive messages on the network.
+-In modern networks, computer hosts can act as a client, a server, or both. The software installed on the computer determines the role it plays.
+-Server are hosts that have software installed which enable them to provide information to client, like email or web pages, to other hosts on the network.º
+-Each service requires separate sever software, For example,a  host requires web server softtware in order to provide web services to the network. Every destination you visit online is provided to you by a server located somewhere on a network that is connected to the internet.
+-Clients are computer hosts that have software installed that enables the hosts ot request and display information obtained from a server. Such as a web browser.
+
+    E-mail: Requiores a email server on the server and a mail client software on the client.
+    Web: A browser requests via HTTP the web page from a web server.
+    File: The file sever stores corporate and user files in a central location. The client devices access thes efiles with client software, such as the Windows File Explorer.
+
+Peer-To-Peer Networks:
+    -Client and server software usually run on separate computers, but it is also possible for one computer to run both. this type of network is called a P2P network.
+    -The simplest P2P network consists of two directly connected computers using either a wired or wireless connection. Both computers are then able to use this simpel network to exchange data and services with each other, acting aas either a client or a server as necessary.
+    -Multiple PCs can also be connected to create a larger P2P network, but this requires a network device, such as a switch, to interconnect the computers.
+    -The main disavantage of a P2P environment is that the performance of a host can be slowed down if it is acting as both a client and aserver at the same time.
+    -In larger business, due to the volume of data traffic, its normal to ahve dedicated servers.
+
+    Benefits:
+        -Easy to setup
+        -Less complex
+        -Lower cost because network devices and dedicated servers may not be required
+        -Can be used for simple tasks such as transferring files and sharing printers
+
+    Disavantages:
+        -No centralized administration
+        -Not as secure
+        -Not scalable
+        -All devices may act as both clients and servers which can show performance 
+
+Peer-To-Peer Applications:
+    A P2P application allows a device to act as both a client and a server within the same communication.
+    In this model, every client is a server and vice-versa. P2P applications require that each end device provide a user interface and run a background service.
+    Some of these applications may use a hyubrid system where resource sharing is decentralized, but the indexes that point to resource locations are stored in a centralized directory. In a hybrid system, each peer accesses an index server to get the location of a resource stored in a peer.
