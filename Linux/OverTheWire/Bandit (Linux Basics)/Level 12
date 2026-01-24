@@ -1,0 +1,18 @@
+Level Goal
+
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed.
+For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. 
+Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+
+
+Much like an onion, this challenge has several layers to it. The file is heavily compressed, by different levels of compression, all of them with different compression types.
+It required a lot of trial and error in order to understand the correct track. Afterwards, i had to keep renaming the files and decompressing them over and over until i reached the ASCII file with the password. 
+
+Technologies used:
+    -Powershell
+    -SSH
+    -mkdir
+    -xxd
+    -gzip & gunzip
+    -tar
+    -bzip2
