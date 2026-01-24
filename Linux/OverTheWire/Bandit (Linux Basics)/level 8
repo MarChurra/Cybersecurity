@@ -1,0 +1,16 @@
+Level Goal
+
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
+
+
+Even if there is only one folder for this challenge, it still asked of you to create a clear data pipeline in order to accomplish the query.
+
+The logic for this one was first to read and sort the file, count the appearance of the lines and then find the one tha is trully unique and only appears once.
+
+Technologies used:
+    -Powershell
+    -SSH
+    -Queried Search with Flags 
+    -Grep
+    -Sort
+    -Uniq 
