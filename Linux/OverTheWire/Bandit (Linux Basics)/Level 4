@@ -1,1 +1,19 @@
+This challenge required us to search for the only ASCII Text (Human Readable) file within the inhere directory.
 
+Using ls and Cat was not enough, since there was some trickery involved with the file names. Using file and ./* allowed me to read correctly the type of files. 
+
+Had to use ./* again together with Cat to read the file and get the password.
+
+Technologies used:
+
+        -Powershell
+
+        -SSH
+
+        -cd 
+
+        -ls 
+
+        -cat
+
+        -file
