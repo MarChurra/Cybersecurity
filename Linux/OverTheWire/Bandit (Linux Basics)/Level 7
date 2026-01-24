@@ -1,0 +1,12 @@
+Level Goal
+
+The password for the next level is stored in the file data.txt next to the word millionth.
+
+Seems scarier at first, but it can be solved easily with a one liner.
+
+Grep followed with what I am looking for is enough to return me the line in question, where the solution is.
+
+Technologies used:
+    -Powershell
+    -SSH
+    -Grep
