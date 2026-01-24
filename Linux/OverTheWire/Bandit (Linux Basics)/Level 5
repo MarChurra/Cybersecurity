@@ -1,0 +1,17 @@
+The goal was to search several directories for a folder that is not an executable, has 1033 bytes in size and is human readable.
+
+The solution for this one was to chain several commands such as type -f and ! executable, to query the files in the directory.
+
+Technologies used:
+
+        -Powershell
+
+        -SSH
+
+        -cd 
+
+        -ls
+
+        -cat
+
+        -Queries 
