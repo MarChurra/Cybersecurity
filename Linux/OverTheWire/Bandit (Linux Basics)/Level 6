@@ -1,0 +1,15 @@
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+
+The search expanded greatly in this challenge. Manual searching would be nearly impossible or too much time consuming.
+The solution to this one required a queried search tot he entire file structure.
+I needed to search for files owned by this user and group via the respective flags. 
+The only difference is that I also used "2>/dev/null" to hide permission denied files, which would have caused a lot of "noise" on the output.
+
+Technologies used:
+    -Powershell
+    -SSH
+    -Queried Search with Flags 
