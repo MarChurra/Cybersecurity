@@ -2,7 +2,7 @@
 
 Since I was connected right away to the home directory, using "ls" was enough to find the file. "find" was also a good option to confirm its presence in the directory.
 
-After that using "cat" was enough to read the file name and progress.
+After that using "cat", with extra steps for a dashed named file, it was enough to read the file name and progress.
 
     Technologies used:
 
