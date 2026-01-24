@@ -1,0 +1,13 @@
+Level Goal
+
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+
+
+This challenge required to first output the Binary file into ASCII readable text with strings. Afterward it was necessary to grep for lines that started with the "=" character.
+
+Technologies used:
+    -Powershell
+    -SSH
+    -Queried Search with Flags 
+    -Grep
+    -Strings
