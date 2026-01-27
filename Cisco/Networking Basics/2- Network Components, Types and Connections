@@ -32,3 +32,20 @@ Peer-To-Peer Applications:
     A P2P application allows a device to act as both a client and a server within the same communication.
     In this model, every client is a server and vice-versa. P2P applications require that each end device provide a user interface and run a background service.
     Some of these applications may use a hyubrid system where resource sharing is decentralized, but the indexes that point to resource locations are stored in a centralized directory. In a hybrid system, each peer accesses an index server to get the location of a resource stored in a peer.
+
+The network infrastructure contains three categories of hardware components:
+    -End Devices (Desktops, Laptops, Printers...)
+    -Intermediate Devices (Router, Switch, Fiirewall Appliance)
+    -Network Media  (Wireless Media, LAN Media, WAN Media )
+
+ISP Services:
+    -An Internet Service Provider provides the link between the home network and the internet. An ISP can be the local cable provider, a landline telephone service provider, the celluar network that provides your smartphone service, or an independent provider who leases bandiwth on the physical network infrastructure of another company.    
+    -Thjey are critical to communications across the global internet. Each ISP connects to other ISPs to form a network of links that interconnect users all over the world. ISPs are connected in a hierarchical manner that ensures that internet traffic generally takes the shortest path from source to destination.
+    -The primary medium that connects the internet backbone is fiber-optic cable. Typicaly installed underground to connect cities within continents. They can also run under the sea to connect countries and continents.
+    -A router is required to securely connect a computer to an ISP. This is the most common connection option. It consists of using a wireless integrated router to connect to the ISP. The router includes a switch to connect wired hosts and a wireless AP to connect wireless hosts. The router also provides client IP addressing information and security for inside hosts.
+    -Most home networks do not connect to an ISP weith fiber-optic cables. They usually use:
+        -Cable (Offered by cable television service providers, the internet data signal is carried on the same coaxial cable that deliverts cable television. It provides a high bandwith, always on, connection to the internet. A special calbe modem separates the internet data signal from the other signals.)
+        -DSL (A Digital Subscriber Line provdes a high banwidth, always on, connection to the internet. It requires a high-speed modem that separates the DSL signal from the telephone one. It runs over a telephone line with the line split into three channels. One for voice calls, a second is a download channel and the third is used for sending and uploading information.)
+        -Cellular (Uses a cell phone network to connect.)
+        -Satellite (Require a clear line of sigth to the satellite, its a wireless connection to the satellite.)
+        -Dial-up Telephone (Uses any phone line and a modem.)
