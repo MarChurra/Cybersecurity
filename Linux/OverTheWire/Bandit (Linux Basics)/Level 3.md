@@ -2,7 +2,7 @@ This challenged required me to find a password inside a hidden file.
 
 The trick here was to use "." in order to reveal hidden files and access them with ls.
 
-Technologies used:
+## Technologies used:
 
         -Powershell
 
