@@ -1,12 +1,11 @@
-Level Goal
+# Level Goal
 
 The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
-
 
 The string is crypted with ROT13 (each character of the alphabet is rotated by 13 position), so a becomes n, and so on.
 Thankfully, Linux already offers a tool, in the shape of tr, that allows us to convert a dataset into another. In this sense, i can specify that i want to translate A-Z into N-Z, with N being the initial character.
 
-Technologies used:
+## Technologies used:
     -Powershell
     -SSH
     -tr
