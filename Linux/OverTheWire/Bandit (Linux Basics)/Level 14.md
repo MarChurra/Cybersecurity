@@ -1,11 +1,11 @@
-Level Goal
+# Level Goal
 
 The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
 
 The first step was to identify the stored password inside the machine. These are usually stored inside /etc. 
 After locating it, using NC to connect to this port on the localhost was enough to proceed to the next challenge.
 
-Technologies used:
+## Technologies used:
     -Powershell
     -SSH
     -NC
