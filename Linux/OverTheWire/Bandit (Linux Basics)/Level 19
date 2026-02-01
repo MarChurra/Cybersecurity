@@ -1,4 +1,4 @@
-#Level Goal
+# Level Goal
 
 The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
 
@@ -11,7 +11,7 @@ This way, CAT will work properly.
 
 ./bandit20-do cat /etc/bandit_pass/bandit20
 
-##Technologies used:
+## Technologies used:
     -Powershell
     -SSH
     -setuid
