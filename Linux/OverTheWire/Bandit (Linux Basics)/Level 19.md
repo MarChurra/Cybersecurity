@@ -9,6 +9,8 @@ The setuid is a specal file permission that will allow us to execute a program w
 
 This way, CAT will work properly.
 
+## Solution found
+
 ./bandit20-do cat /etc/bandit_pass/bandit20
 
 ## Technologies used:
