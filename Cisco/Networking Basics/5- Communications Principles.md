@@ -28,7 +28,7 @@ A standard is a set of rules that determines how something must be done. Network
 
 ## The TCP/IP Model
 
-  ###TCP/IP Model Layers:
+  ### TCP/IP Model Layers:
   -Application (Represents data to the user, plus enconding and dialog control )
   -Transport (Supports communication between various devices across diverse networks)
   - Internet (Determines the best path through the network )
