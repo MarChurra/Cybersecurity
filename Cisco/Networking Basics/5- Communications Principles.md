@@ -35,3 +35,26 @@ A standard is a set of rules that determines how something must be done. Network
   - Network Access (Controls the hardware devices and media that make up the network )
 
 ## OSI Reference Model 
+There are two basic types of models that we use to describe the functions that must occur in order for network communications to be sucessful: protocol models and reference models.
+
+  ###Protocol Model - Closely matches the structure of a particular protocol suite. A protocol sutie includes the set of related protocls that typically provide all the functionality required for people to communicate with the data network. The TCP/IP model is a protocol model because it describes the functions that occur at each layer of protocol within this suite. 
+ ###Reference Model - This type of model describes the functions that must be completed at particular layer, but does not specify exactly how a function should be accomplished. A reference model is not intended to provide a sufficient level of detail to defione precisely how each protocol should work at each layer. The primary purpose of this model is to aid in clearer understanding of the functions and processes necessary for network communications.
+
+The most widely known internetwork reference model was created by the OSI project, at the ISO. It is used for data network design, specificatrions and troubleshooting. It is commonly referred to as the OSI Model.
+
+## OSI Model Layer:
+  - 7 - Application - Contains protocols used for process-to-process communications
+  - 6 - Provides for common representation of the data transferred between application layer services.
+  - 5 - Session - The session layer provides services to the presentation layer to organize its dialogue and to manage data exchange
+  - 4 - Transport - Defines services to segment, transfer, and reassemble the data for individual communications between the end devices.
+  - 3 - Network - Provides services to exchange the individual pieces of data over the network, between identified end devices.
+  - 2 - Data Link - DEscribes methods for exchanging data frames between devices over a common media
+  - 1 - Physical - Describes the mechanical., electrical, functional, and procedural means to activate, maintainn, and de-activate physical connections for a bit transmission to and from a network device.
+
+## TCP/IP Model:
+  -Application
+  -Transport
+  -Internet
+  -Network Access
+     
+  
