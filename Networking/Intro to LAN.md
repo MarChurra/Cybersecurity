@@ -40,4 +40,9 @@
       - ARP Request
       - ARP Reply
   - When the ARP Request is sent, a message is broadcasted on the network to other devices asking, "What is the MAC address that owns this IP"? When other devices receive that message, they will only responde if they own that IP and will and ARP Reply with its MAC address. The device that made the request can now remember this mapping and store in it the **ARP Cache**
-  - 
+
+## DHCP
+  -  IP addresses can be assigned manually or automatically, by using DHCP (Dynamic Host Configuration Protocol) server. When a device connects to network, if it hasn´t a manualç IP, it sends out a request via DHCP Discover to see if any DHCP servers are on the network.
+  -  The DHCP server then replies back with an IP address the device could use **DHCP Offer**.
+  -  The device the sends a reply confirming it wants the offered IP ADdress **DHCP Request**, and then, the DHCP server sends a reply acknowledging this has been completed. **DHCP ACK**
+  -  
