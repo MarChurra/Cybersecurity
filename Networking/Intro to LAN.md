@@ -29,4 +29,15 @@
 - Host Address - AN IP address here is used to identify a device on the subnet. A device wil have the network address of 192.168.1.1
 - Default Gateway - Is a special address assigned to a device on the network that is capable of sending information to another network. Any data that needs to go to a device in an external network, will be sent to this device. They can use any host address but usually use either the first or last host address in a network, such as .1 a .254
   
- 
+ ## ARP
+ - The Address Resolution Protocol is the technology that is responsible for allowing devices to identify themselves on a network.
+ - ARP allows a device to associate its MAC address with an IP on the network. Each device on a network will keep a log of the MAC associated with other devices.
+ - When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device. Devices can use ARP to find the MAC address of a device for communication.
+
+## How does it work?
+  - Each device within a network has a ledger to store information on, which is called a cache. In the contexct of ARP, this cache stores the identifiers of other devices on the network.
+  - In order to map these two identifiers together (IP and MAC), ARP sends two broadcasts:
+      - ARP Request
+      - ARP Reply
+  - When the ARP Request is sent, a message is broadcasted on the network to other devices asking, "What is the MAC address that owns this IP"? When other devices receive that message, they will only responde if they own that IP and will and ARP Reply with its MAC address. The device that made the request can now remember this mapping and store in it the ** ARP Cache **
+  - 
