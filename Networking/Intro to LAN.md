@@ -39,5 +39,5 @@
   - In order to map these two identifiers together (IP and MAC), ARP sends two broadcasts:
       - ARP Request
       - ARP Reply
-  - When the ARP Request is sent, a message is broadcasted on the network to other devices asking, "What is the MAC address that owns this IP"? When other devices receive that message, they will only responde if they own that IP and will and ARP Reply with its MAC address. The device that made the request can now remember this mapping and store in it the ** ARP Cache **
+  - When the ARP Request is sent, a message is broadcasted on the network to other devices asking, "What is the MAC address that owns this IP"? When other devices receive that message, they will only responde if they own that IP and will and ARP Reply with its MAC address. The device that made the request can now remember this mapping and store in it the **ARP Cache**
   - 
