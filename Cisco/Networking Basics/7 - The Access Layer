@@ -1,0 +1,6 @@
+## Encapsulation 
+- Each computer message is encapsulated in a specific format, called a frame, before it is sent over the network. A frame acts like an envelope, which  provides the address of the intended destination and the address of the source host.
+  - The format and contents of a frame are determined by the type of message being sent and the channel over which it is communicated. Messages that are not correctly formatted are not sucessfully delivered to or processed by the destination host.
+- The Preamble and Start Frame Delimiter SFD indicate the beginning of an Ethernet Frame.
+
+## Ethernet Switches 
