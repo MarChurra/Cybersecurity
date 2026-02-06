@@ -4,3 +4,5 @@
 - The Preamble and Start Frame Delimiter SFD indicate the beginning of an Ethernet Frame.
 
 ## Ethernet Switches 
+- The routing is decided based on the destination MAC Address
+- The Switches add entries to their MAC address table based on the source MAC address
