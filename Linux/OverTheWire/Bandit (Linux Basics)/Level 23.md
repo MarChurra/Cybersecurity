@@ -10,8 +10,7 @@ NOTE 2: Keep in mind that your shell script is removed once executed, so you may
 
 The obstacle of this level is the script running in chron, which deletes the contents of the tmp files for the usr bandit24.
 
-**
-myname=$(whoami)
+**myname=$(whoami)
 
 cd /var/spool/$myname
 echo "Executing and deleting all scripts in /var/spool/$myname:"
@@ -25,8 +24,7 @@ do
             timeout -s 9 60 ./$i
         fi
         rm -f ./$i
-    fi
-**
+    fi**
 
 In this scenario, we need to create and run our own script that will sucessfully retrieve tht password, before it is cleared.
 
