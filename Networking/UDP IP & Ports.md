@@ -1,3 +1,4 @@
+## UDP
 - The User Datagram Protocol  is another protocol used to communicate data between devices.
 - Unlike its brother TCP, UDP is stateless and does not require constant connection between the two devices for data to be sent.
 - The Three-Way handshake does not occur, nor is there any sync between devices
