@@ -5,7 +5,7 @@
 - UDP leaves the application to decide if there is any control over how quickly packets are sent.
 - No safeguards for data integrity
 
-** Headers of a UDP Packet:
+## Headers of a UDP Packet:
   - Time To Live TTL - Sets an expiry timer for the packet, so it does not clog up the network, if it never manages to reach a host or escape.
   - Source Address
   - Destination Address
@@ -13,7 +13,7 @@
   - Destination Port
   - Data
 
-** Ports
+## Ports
 - Ports are essential for data to be exchanged.
 - These ports enforce what can park and where, rejecting incompatible data transfers.
 - Networking devices also use ports to enforce strict rules when communcating with one another.
