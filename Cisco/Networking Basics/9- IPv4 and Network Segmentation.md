@@ -35,4 +35,25 @@
   - These are special addresses used by a host to direct traffic to itself.
 
   ### Link-Local Addresses
-  - 169.254.0.0/16 or 169.254.0.1 to 169.254.255.254 are commonly known as the Automatic Private IP Addressing **APIPA** addresses or self-assigned addresses. They are used by a Windows client to self-configure in the event that the client cannot obtain an IP addressing through other methods. 
+  - 169.254.0.0/16 or 169.254.0.1 to 169.254.255.254 are commonly known as the Automatic Private IP Addressing **APIPA** addresses or self-assigned addresses. They are used by a Windows client to self-configure in the event that the client cannot obtain an IP addressing through other methods.
+
+### Legacy Classfull Addressing
+  - As of the 80´s, with the RFC 790 norm, customers were allocated a network address based on one of three classes, A, B or C. The unicast ranges are divided into these classes:
+      - Class A (0.0.0.0/8 to 127.0.0.0/8) - Designed to suppoort extremely large networks. The first octet indicates the network address and the remaining three octests for host addresses.
+      - Class B (128.0.0.0/16 to 191.255.0.0/16) - Designed to support the needs of moderate to large size networks. The first two octets are for the network.
+      - Class C (192.0.0.0/24 to 223.255.255.255.0/24) - Designed to support small networks. Only the last octet is for host addresses.
+      - Class D - Multicast block consisting fof 224.0.0.0 to 239.0.0.0
+      - Class E - Experimental Address Block consisting of 240.0.0.0 - 255.0.0.0
+  - Nowadays, with the World WIde Web, this system was mostly replaced with classless addressing and network addresses are allocated based on the number of addresses that can be justified.
+
+## Broadcast Domains and Segmentation
+- In an Ethernet LAN, devices use broadcasts and the Address Resolution Protocol to locate other devices. ARP sends Layer 2 broadcasts to a known IPv4 address on the local network to discover the associated MAC address.
+- Devices on LANs also locate other devices using services.
+- A host typically acquires its IPv4 address configuration using the Dynamic Host Configuration Protocol which sends a broadcast on the local network to locate a DHCP Server.
+- Switches propagate broadcasts out all interfaces expect the interface on which it was received. It can forward to other switches and users connected in the network.
+- Routers do not propagate broadcasts. When it receives a broadcast, it does not forward it.
+- Each router interface connects to a broadcast domain and broadcasts are only propagated within that specific broadcast domain.
+- A large broadcast domain is a network that connects many hosts. A problem with a large broadcast domain is that these hosts can generate excessive broadcasts and negatively affect the network.
+- This creates a bottleneck because of the volume of traffic. The solution is to reduce the size of the network to create smaller broadcast domains in a process called subnetting. These smaller networks are called subnets.
+- Broadcasts are only propagated within the smaller broadcast domains. A broadcast in LAN 1 does not propagate to Lan 2.
+- 
