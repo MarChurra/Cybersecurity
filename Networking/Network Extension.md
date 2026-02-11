@@ -22,4 +22,14 @@
     - **PPP** - USed by PPTP to allow for authetnication and provide encryption of data. Work by using a private key a nd a public certificate, similar to SSH. A private key & certificate must match for you to connect. Its a non-routable technology.
     - **PPTP** - Point-To-Point-Tunneling-Protocol is the technology that allows the data from PPP to travel and leave a network. Uses an weaker encryption.
     - **IPSec** - Internet Protocol Security encrypts data using the existing IP framework. More difficult to setup, but stronger protection.
-    - 
+
+## LAN Networking Devices
+- A router connects networks and passes data between them. It does this by using routing.
+- Routing is the label given to the process of data travelling across networks. Routing involves creating a path between networks so that this data can be sucessfully delivered.
+- They operate at the Layer 3 of the OSI model.
+
+## Switch
+- A dedicated networking device responsible for providing a means of connecting to multiple devices. Switches can facilitate many devices using Ethernet Cables.
+- Operate at both layer 2 and 3 of the OSI model. These are exclusive.
+- A technology called **VLAN** called Virtual Local Area Network, allows specific devices within a network to be virtually split up. This split means they can all benefit from things such as an Internet Connectionn, but are treated separately.
+- It adds security, becasue it means that rules in place determine how specific devices communicate with each other.
