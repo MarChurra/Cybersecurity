@@ -1,0 +1,14 @@
+- pwd - Show me the current location (Printing Working Directory)
+- ls - Shows subfolders of the current directory
+- ls -l - Lists the content of the subfolder in further detail
+- ls -al - Lists the content of the subfolders wioth detals and hidden files (Hidden files start with a dot and are hidden by default by Linux)
+- cd - Change Directory
+- cd .. - Go back one level
+- fmind - Locates files with find <start> -name <filename>
+- ~ - Home directory
+- cat - Reads the file
+- whoami - Logged in user
+- uname -a - Kernel Version
+- df -h - Check Disk usage or available space (h flag is for human readable).
+  - /dev/root is the main disk of the system.
+  - Linux stores configuration and information files in the /etc directory 
