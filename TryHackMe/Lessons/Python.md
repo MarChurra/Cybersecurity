@@ -1,0 +1,3 @@
+- A high-level general purpose programming language.
+- By high-level, it hides most implementation details
+- General purpose means you can use python for a wide variety of scenarios, from web applications and automation scripts to data science and machine learning.
