@@ -10,3 +10,5 @@
 - Each vulnerability is assigned a CVE ID with a standardized format.
 
 ### Exploit Database 
+- Find working exploits
+- GitHub
