@@ -12,3 +12,7 @@
 ### Exploit Database 
 - Find working exploits
 - GitHub
+
+### Manual pages
+- You can use man before a cmd in linux to see its manual.
+- Press q to quit
