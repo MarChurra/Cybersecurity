@@ -141,3 +141,117 @@
 - nected to the local host. Sometimes it is necessary to know which active TCP connections are open and running on a networked host. Netstat is an important network utility that can be used to verify those connections.
 - By default, the netstat command will attempt to resolve IP addresses to domain names and port numbers to well-known applications. The -n option can be used to display IP addresses and port numbers in their numerical form.
 
+## TCP Communication Process
+
+### TCP Server Processes
+- Each application process running on a server is configured to use a port number. The port number is either automatically assigned or configured manually by a system administrator.
+- An individual server cannot have two services assigned to the same port number within the same transport layer services. For example, a host running a web server application and a file transfer application cannot have both configured to use the same port, such as TCP port 80.
+- An active server application assigned to a specific port is considered open, which means that the transport layer accepts, and processes segments addressed to that port.
+- Any incoming client request addressed to the correct socket is accepted, and the data is passed to the server application.
+-  There can be many ports open simultaneously on a server, one for each active server application.
+
+### TCP Connection Process
+- In TCP connections, the host client establishes the connection with the server using the three-way handshake process.
+  - SYN from client > SYN + ACK from server > ACK from client to server. Connection Established
+
+### Session Termination
+- FIN Finish control flag must be set in the segment header.
+- To end each one-way TCP session, a two-way handshake, consisting of a FIN segment and an Acknowledgment (ACK) segment, is used.
+-  Therefore, to terminate a single conversation supported by TCP, four exchanges are needed to end both sessions.
+-  Either the client or the server can initiate the termination.
+-  In the example, the terms client and server are used as a reference for simplicity, but any two hosts that have an open session can initiate the termination process.
+  - FYN > SYN + ACK > FIN sent to client > ACK sent from client to server and connection is closed
+
+### TCP Three-way Handshake Analysis
+- Hosts maintain state, track each data segment within a session, and exchange information about what data is received using the information in the TCP header.
+- TCP is a full-duplex protocol, where each connection represents two one-way communication sessions.
+- Control bits in the TCP header indicate the progress and status of the connection.
+- These are the functions of the three-way handshake:
+  - It establishes that the destination device is present on the network.
+  - It verifies that the destination device has an active service and is accepting requests on the destination port number that the initiating client intends to use.
+  - It informs the destination device that the source client intends to establish a communication session on that port number.
+- After the communication is completed the sessions are closed, and the connection is terminated.
+- The connection and session mechanisms enable TCP reliability function.
+- The fields are of the header are:
+  - URG - urgent Pointer field significant
+  - ACK - Acknowledgement fglag used in connection establishment and session termination
+  - PSH - Push function
+  - RST - Reset the connection when an error or timeout occurs
+  - SYN - Synchronize sequence numbers used in connection establishment
+  - FIN - No more data from sender and used in session termination
+ 
+  ## Reliability and Flow Control
+  - The reason that TCP is the better protocol for some applications is because, unlike UDP, it resends dropped packets and number of packets to indicate their proper order before delivery.
+  - TCP can also help maintain the flow of packets so that devices do not become overloaded.
+  - There may be times when TCP segments do not arrive at their destination. Other times, the TCP segments might arrive out of order. For the original message to be understood by the recipient, all the data must be received and the data in these segments must be reassembled into the original order.
+  - Sequence numbers are assigned in the header of each packet to achieve this goal. The sequence number represents the first data byte of the TCP segment.
+  - During session setup, an initial sequence number (ISN) is set. This ISN represents the starting value of the bytes that are transmitted to the receiving application.
+  - As data is transmitted during the session, the sequence number is incremented by the number of bytes that have been transmitted.
+  - This data byte tracking enables each segment to be uniquely identified and acknowledged. Missing segments can then be identified.
+  - The ISN does not begin at one but is effectively a random number. This is to prevent certain types of malicious attacks.
+  - The receiving TCP process places the data from a segment into a receiving buffer.
+  - Segments are then placed in the proper sequence order and passed to the application layer when reassembled
+  - Any segments that arrive with sequence numbers that are out of order are held for later processing.
+  - Then, when the segments with the missing bytes arrive, these segments are processed in order.
+
+### TCP Reliability - Data Loss and Retransmission
+- The sequence (SEQ) number and acknowledgement (ACK) number are used together to confirm receipt of the bytes of data contained in the transmitted segments
+- TCP uses the ACK number sent back to the source to indicate the next byte that the receiver expects to receive. This is called expectational acknowledgement.
+- Host operating systems today typically employ an optional TCP feature called selective acknowledgment (SACK), negotiated during the three-way handshake.
+- If both hosts support SACK, the receiver can explicitly acknowledge which segments (bytes) were received including any discontinuous segments.
+- The sending host would therefore only need to retransmit the missing data
+- TCP uses timers to know how long to wait before resending a segment
+
+### TCP Flow Control - Window Size and Acknowledgments
+- TCP also provides mechanisms for flow control. Flow control is the amount of data that the destination can receive and process reliably.
+- Flow control helps maintain the reliability of TCP transmission by adjusting the rate of data flow between source and destination for a given session. To accomplish this, the TCP header includes a 16-bit field called the window size.
+- The window size determines the number of bytes that can be sent before expecting an acknowledgment. The acknowledgment number is the number of the next expected byte.
+- The window size is the number of bytes that the destination device of a TCP session can accept and process at one time.
+- The window size is included in every TCP segment so the destination can modify the window size at any time depending on buffer availability.
+- The initial window size is agreed upon when the TCP session is established during the three-way handshake.
+- The source device must limit the number of bytes sent to the destination device based on the window size of the destination.
+- Only after the source device receives an acknowledgment that the bytes have been received, can it continue sending more data for the session.
+- Typically, the destination will not wait for all the bytes for its window size to be received before replying with an acknowledgment.
+- As the bytes are received and processed, the destination will send acknowledgments to inform the source that it can continue to send additional bytes.
+- A destination sending acknowledgments as it processes bytes received, and the continual adjustment of the source send window, is known as sliding windows.
+- If the availability of the destination’s buffer space decreases, it may reduce its window size to inform the source to reduce the number of bytes it should send without receiving an acknowledgment.
+- Devices today use the sliding windows protocol. The receiver typically sends an acknowledgment after every two segments it receives. 
+
+### TCP Flow Control - Maximum Segment Size (MSS)
+- In the figure, the source is transmitting 1,460 bytes of data within each TCP segment. This is typically the Maximum Segment Size (MSS) that the destination device can receive.
+- The MSS is part of the options field in the TCP header that specifies the largest amount of data, in bytes, that a device can receive in a single TCP segment.
+- The MSS size does not include the TCP header. The MSS is typically included during the three-way handshake.
+- A common MSS is 1,460 bytes when using IPv4. A host determines the value of its MSS field by subtracting the IP and TCP headers from the Ethernet maximum transmission unit (MTU).
+- On an Ethernet interface, the default MTU is 1500 bytes. Subtracting the IPv4 header of 20 bytes and the TCP header of 20 bytes, the default MSS size will be 1460 bytes.
+
+### TCP Flow Control - Congestion Avoidance
+- When congestion occurs on a network, it results in packets being discarded by the overloaded router.
+- When packets containing TCP segments do not reach their destination, they are left unacknowledged
+- By determining the rate at which TCP segments are sent but not acknowledged, the source can assume a certain level of network congestion.
+- Whenever there is congestion, retransmission of lost TCP segments from the source will occur. If the retransmission is not properly controlled, the additional retransmission of the TCP segments can make the congestion even worse.
+- If the source determines that the TCP segments are either not being acknowledged or not acknowledged in a timely manner, then it can reduce the number of bytes it sends before receiving an acknowledgment.
+- Acknowledgment numbers are for the next expected byte and not for a segment.
+- Notice that it is the source that is reducing the number of unacknowledged bytes it sends and not the window size determined by the destination.
+
+## UDP Communication
+
+### UDP Low Overhead versus Reliability
+- As explained before, UDP is perfect for communications that need to be fast, like VoIP.
+- UDP does not establish a connection. UDP provides low overhead data transport because it has a small datagram header and no network management traffic.
+  
+### UDP Datagram Reassembly
+- Like segments with TCP, when UDP datagrams are sent to a destination, they often take different paths and arrive in the wrong order. UDP does not track sequence numbers the way TCP does. UDP has no way to reorder the datagrams into their transmission order
+- Therefore, UDP simply reassembles the data in the order that it was received and forwards it to the application. If the data sequence is important to the application, the application must identify the proper sequence and determine how the data should be processed.
+- Out of order datagrams are not re-ordered and lost datagrams are not re-sent.
+
+### UDP Server Processes and Requests
+- Like TCP-based applications, UDP-based server applications are assigned well-known or registered port numbers.
+- When these applications or processes are running on a server, they accept the data matched with the assigned port number.
+- When UDP receives a datagram destined for one of these ports, it forwards the application data to the appropriate application based on its port number.
+
+### UDP Client Processes
+- As with TCP, client-server communication is initiated by a client application that requests data from a server process. The UDP client process dynamically selects a port number from the range of port numbers and uses this as the source port for the conversation
+- The destination port is usually the well-known or registered port number assigned to the server process.
+- After a client has selected the source and destination ports, the same pair of ports are used in the header of all datagrams in the transaction
+- For the data returning to the client from the server, the source and destination port numbers in the datagram header are reversed.
+- 
