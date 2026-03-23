@@ -23,3 +23,23 @@ Sw-Floor-1(config-if)# no shutdown
 Sw-Floor-1(config-if)# exit
 Sw-Floor-1(config)# ip default-gateway 192.168.1.1
 
+## Configure Initial Router Settings
+
+### Basic Router Configuration Steps
+1. Configure the device name
+  - **hostname {hostname}**
+2. Secure priviliged EXEC mode
+  - **enable secret password**
+3. Secure user EXEC mode
+  - **line console 0** > **password {password}** > **login**
+4. Secure Remote Telnet / SSH Access
+  - **line vty 0 4** > **password {password}** > **login** > **transport input {ssh | telnet | none | all}**
+5. Secure all passwords in the config file
+  - **exit** > **service password-encryption**
+6. Provide legal notification
+  - **banner motd delimiter message delimiter**
+7. Save the configuration
+  - **copy running-config startup-config**
+
+
+  
