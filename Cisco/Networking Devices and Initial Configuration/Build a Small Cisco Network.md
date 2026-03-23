@@ -70,4 +70,10 @@ Sw-Floor-1(config)# ip default-gateway 192.168.1.1
 5. Configure the vty lines - Enable the SSH protocol on the vty lines using the transport input ssh line configuration mode command. se the line vty global configuration mode command and then the login local line configuration mode command to require local authentication for SSH connections from the local username database.
 6. Enable SSH version 2 - By default, SSH supports both versions 1 and 2. When supporting both versions, this is shown in the show ip ssh output as supporting version 1.99. Version 1 has known vulnerabilities. For this reason, it is recommended to enable only version 2. Enable SSH version using the ip ssh version 2 global configuration command.
 
-  
+### Default Gateway on a Host
+- If your local network has only one router, it will be the gateway router and all hosts and switches on your network must be configured with this information.
+- If your local network has multiple routers, you must select one of them to be the default gateway router.
+- A switch that interconnects client computers is typically a Layer 2 device. As such, a Layer 2 switch does not require an IP address to function properly. However, an IP configuration can be configured on a switch to give an administrator remote access to the switch.
+- To connect to and manage a switch over a local IP network, it must have a switch virtual interface (SVI) configured
+- The SVI is configured with an IPv4 address and subnet mask on the local LAN. The switch must also have a default gateway address configured to remotely manage the switch from another network.
+- 
