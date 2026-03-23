@@ -41,5 +41,33 @@ Sw-Floor-1(config)# ip default-gateway 192.168.1.1
 7. Save the configuration
   - **copy running-config startup-config**
 
+## Secure the Devices
+### Password Recommendations
+- Use a password lenght of 8-10 characters
+- Make passwords complex, with a mix of uppercase, lowercase, numbers and special characters
+- Avoid passwords based on repetion, common dictionary words, letter or number sequences, suernames relative or pet names.
+- Change the password often
+- Do not write passwsords down and leave them in obvious places
+- On cisco routers, leading spaces are ignored for passwords, but spaces are after the first character are not. This allows you to create a passphrase.
+
+### Secure Remote Access
+- One way to acess remotely to the device is to use a PC attached to the console port
+- This type fof connection is frequently used for initial device configuration
+- Setting a password for console connection access is done in global configuration mode. These commands prevent unauthorized users from accessing user mode from the console port.
+- SSH is the preferred method because it is more secure. When the device is accessed through the network, it is considered a vty connection. The password must be assigned to the vty port.
+- By default, many Cisco switches support up to 16 vty lines that are numbered 0 to 15.
+- The number of vty lines supported on a Cisco router varies with the type of router and the IOS version
+- However, five is the most common number of vty lines configured on a router.
+- A password needs to be set for all available vty lines. The same password can be set for all connections.
+- To verify that the passwords are set correctly, use the show running-config command. These passwords are stored in the running-configuration in plaintext. It is possible to set encryption on all passwords stored within the router so that they are not easily read by unauthorized individuals.
+- The global configuration command service password-encryption ensures that all passwords are encrypted.
+
+### Enable SSH
+1. Verify SSH support - Show IP SSH CMD
+2. Configure the IP Domain - ip domain-name CMD
+3. Generate RSA key pairs - SSH version 2 is more secure. Issue the **ip ssh version 2** global configuration mode command. Generating an RSA key pair automatically enables SSH. Use the **crypto key generate rsa** global configuration mode cmd to enable the SSH server on the switch and generate an RSA key pair. To delete the RSA key pair, use the crypto key zeroize rsa global configuration mode command. After the RSA key pair is deleted, the SSH server is automatically disabled.
+4. Configure user authentication - The SSH server can authenticate users locally or use an authentication server. To use the local authentication method, create a username and password pair with the username username secret password global configuration mode command
+5. Configure the vty lines - Enable the SSH protocol on the vty lines using the transport input ssh line configuration mode command. se the line vty global configuration mode command and then the login local line configuration mode command to require local authentication for SSH connections from the local username database.
+6. Enable SSH version 2 - By default, SSH supports both versions 1 and 2. When supporting both versions, this is shown in the show ip ssh output as supporting version 1.99. Version 1 has known vulnerabilities. For this reason, it is recommended to enable only version 2. Enable SSH version using the ip ssh version 2 global configuration command.
 
   
