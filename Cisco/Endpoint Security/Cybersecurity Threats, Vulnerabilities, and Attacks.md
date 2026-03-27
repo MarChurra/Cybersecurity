@@ -169,4 +169,90 @@
 - Cybersecurity specialists have recently discovered logic bombs that attack and destroy the hardware components in a device or server, including the cooling fans, central processing unit (CPU), memory, hard drives and power supplies. The logic bomb overdrives these components until they overheat or fail.
 
 ### Ransomware 
-- 
+- This malware is designed to hold a computer system or the data it contains captive until a payment is made.
+- Ransomware usually works by encrypting your data so that you cannot access it. According to ransomware claims, once the ransom is paid via an untraceable payment system, the cybercriminal will supply a program that decrypts the files or send an unlock code — but in reality, many victims do not gain access to their data even after they have paid.
+- Some versions of ransomware can take advantage of specific system vulnerabilities to lock it down. Ransomware is often spread through phishing emails that encourage you to download a malicious attachment, or through a software vulnerability.
+
+### Denial of Service Attacks
+- Denial of service (DoS) attacks are a type of network attack that is relatively simple to conduct, even for an unskilled attacker. They are a major risk as they usually result in some sort of interruption to network services, causing a significant loss of time and money.
+-  Even operational technologies, hardware or software that controls physical devices or processes in buildings, factories or utility providers, are vulnerable to DoS attacks, which can cause a shutdown, in extreme circumstances.
+-  Caused by:
+  - Overwhelming quantity of traffic
+  - Maliciously formatted packets
+
+### Layer 2 Attacks
+- Spoofing / Poisoning
+- MAC Flooding+
+
+### Man in the Middle and Man in the Mobile Attacks
+- MitM: A cybercriminal takes control of a device without the users knowledge. With this level of access, an attacker can intercept, manipulate and relay false information betweent he sender and the intended destinatiion.
+- MitMo: Takes control over a users mobile device. When infected, the mobile device is instructed to exfiltrate user-sensitive information and send it to attackers.
+
+### Zero-Day Attacks
+- A zero-day attack or zero-day threat exploits software vulnerabilities before they become known or before they are disclosed by the software vendor.
+- A network is extremely vulnerable to attack between the time an exploit is discovered (zero hour) and the time it takes for the software vendor to develop and release a patch that fixes this exploit.
+
+### Keyboard Logging
+- As the name suggests, keyboard logging or keylogging refers to recording or logging every key struck on a computer’s keyboard.
+- Cybercriminals log keystrokes via software installed on a computer system or through hardware devices that are physically attached to a computer, and configure the keylogger software to send the log file to the criminal.
+
+## Wireless and mobile Device Attacks
+
+### Grayware and Smishing
+- Grayware is any unwanted application that behaves in an annoying or undesirable manner. And while grayware may not carry any recognizable malware, it may still pose a risk to the user by, for example, tracking your location or delivering unwanted advertising.
+- Authors of grayware typically maintain legitimacy by including these ‘gray’ capabilities in the small print of the software license agreement. This factor poses a growing threat to mobile security in particular, as many smartphone users install mobile apps without really considering this small print.
+- Short message service phishing or SMiShing is another tactic used by attackers to trick you. Fake text messages prompt you to visit a malicious website or call a fraudulent phone number, which may result in malware being downloaded onto your device or personal information being shared. 
+
+### Rogue Access Points
+- A rogue access point is a wireless access point installed on a secure network without explicit authorization. Although it could potentially be set up by a well-intentioned employee looking for a better wireless connection, it also presents an opportunity for attackers looking to gain access to an organization’s network.
+
+### Radio Frequency Jamming
+- Wireless signals are susceptible to electromagnetic interference (EMI), radio frequency interference (RFI) and even lightning strikes or noise from fluorescent lights.
+- Attackers can take advantage of this fact by deliberately jamming the transmission of a radio or satellite station to prevent a wireless signal from reaching the receiving station.
+- In order to successfully jam the signal, the frequency, modulation and power of the RF jammer needs to be equal to that of the device that the attacker is seeking to disrupt.
+
+### Bluejacking and Bluesnarfing
+- An attacker uses wirelress Bluetooth technology to send unauthorized messages or shcoking images to another Bluetooth Device.
+- Bluesnarfing occurs when an attacker copies information, such as emails and contact lists, from a targets device, using a Bluetooth connection.
+
+### Attacks against wi-fi protocols
+- Wired equivalent privacy (WEP) and Wi-Fi protected access (WPA) are security protocols that were designed to secure wireless networks that are vulnerable to attacks.
+- WEP was developed to provide data transmitted over a wireless local area network (WLAN) with a level of protection comparable to what is usually expected of a traditional wired network. It added security to wireless networks by encrypting the data.
+- WEP used a key for encryption. The problem, however, was that WEP had no provision for key management and so the number of people sharing the same key continually grew, giving criminals access to a large amount of traffic data. Furthermore, WEP’s initialization vector (IV), one of the key components of its encryption key, was too small, readable and static.
+- To address this and replace WEP, WPA and then WPA2 were developed as improved security protocols. Unlike with WEP, an attacker cannot recover WPA2’s encryption key by observing network traffic. However, they can still use a packet sniffer to analyze the packets going between an access point and a legitimate user.
+
+## Application Attacks
+
+### Cross-Site Scripting
+- Cross-site scripting (XSS) is a common vulnerability found in many web applications. This is how it works:
+  1. Cybercriminals exploit the XSS vulnerability by injecting scripts containing malicious code into a web page.
+  2. The web page is accessed by the victim, and the malicious scripts unknowingly pass to their browser.
+  3. The malicious script can access any cookies, session tokens or other sensitive information about the user, which is sent back to the cybercriminal
+  4. Armed with this information, the cybercriminal can impersonate the user.
+ 
+### Code Injection
+- Most modern websites use a database, such as a Structured Query Language (SQL) or an Extensible Markup Language (XML) database, to store and manage data. Injection attacks seek to exploit weaknesses in these databases.
+  - XML Injection Attack: An XML injection attack can corrupt the data on the XML database and threaten the security of the website. It works by interfering with an application’s processing of XML data or query entered by a user. Cybercriminals can manipulate this query by programming it to suit their needs. This will grant them access to all of the sensitive information stored on the database and allows them to make any number of changes to the website.
+  - SQL Injection Attack: Cybercriminals can carry out an SQL injection attack on websites or any SQL database by inserting a malicious SQL statement in an entry field. This attack takes advantage of a vulnerability in which the application does not correctly filter the data entered by a user for characters in an SQL statement. As a result, the cybercriminal can gain unauthorized access to information stored on the database, from which they can spoof an identity, modify existing data, destroy data or even become an administrator of the database server itself.
+  - DLL Injection Attack: A dynamic link library (DLL) file is a library that contains a set of code and data for carrying out a particular activity in Windows. Applications use this type of file to add functionality that is not built-in, when they need to carry out this activity. DLL injection allows a cybercriminal to trick an application into calling a malicious DLL file, which executes as part of the target process.
+  - LDAP Injection Attack: The Lightweight Directory Access Protocol (LDAP) is an open protocol for authenticating user access to directory services. An LDAP injection attack exploits input validation vulnerabilities by injecting and executing queries to LDAP servers, giving cybercriminals an opportunity to extract sensitive information from an organization’s LDAP directory.
+ 
+### Buffer Overflow
+- Buffers are memory areas allocated to an application.
+- A buffer overflow occurs when data is written beyond the limits of a buffer.
+- By changing data beyond the boundaries of a buffer, the application can access memory allocated to other processes. This can lead to a system crash or data compromise, or provide escalation of privileges.
+- These memory flaws can also give attackers complete control over a target’s device. For example, an attacker can change the instructions of a vulnerable application while the program is loading in memory and, as a result, can install malware and access the internal network from the infected device.
+
+### Remote Code Executions
+- Remote code execution allows a cybercriminal to take advantage of application vulnerabilities to execute any command with the privileges of the user running the application on the target device.
+- Privilege escalation exploits a bug, design flaw or misconfiguration in an operating system or software application to gain access to resources that are normally restricted.
+
+- Cross-site request forgery: CSRF describes the malicious exploit of a website where unauthorized commands are submitted from a user’s browser to a trusted web application. A malicious website can transmit such commands through specially-crafted image tags, hidden forms or JavaScript requests — all of which can work without the user’s knowledge.
+- Race Condition Attack: Also known as a time of check (TOC) or a time of use (TOU) attack, a race condition attack happens when a computing system that is designed to handle tasks in a specific sequence is forced to perform two or more operations simultaneously. For example, operating systems are made up of threads — the smallest sequence of program instructions required to carry out a process. When two or more threads access shared data and try to change it at the exact same time, a race condition attack occurs.
+- Improper input Handling Attack: Data inputted by a user that is not properly validated can affect the data flow of a program and cause critical vulnerabilities in systems and applications that result in buffer overflow or SQL injection attacks.
+- Error handling Attack: Attackers can use error messages to extract specific information such as the hostnames of internal systems and directories or files that exist on a given web server — as well as database, table and field names that can be used to craft SQL injection attacks.
+- API attack: An API delivers a user response to a system and sends the system’s response back to the user. An API attack occurs when a cybercriminal abuses an API endpoint.
+- Replay Attack: This describes a situation where a valid data transmission is maliciously or fraudulently repeated or delayed by an attacker, who intercepts, amends and resubmits the data to get the receiver to do whatever they want.
+- Directory Traversal Attack: Directory traversal occurs when an attacker is able to read files on the webserver outside of the directory of the website. An attacker can then use this information to download server configuration files containing sensitive information, potentially expose more server vulnerabilities or even take control of the server!
+- Resource Exhaustion Attacks: These attacks are computer security exploits that crash, hang or otherwise interfere with a targeted program or system. Rather than overwhelming network bandwidth like a DoS attack, resource exhaustion attacks overwhelm the hardware resources available on the target’s server instead.
+
