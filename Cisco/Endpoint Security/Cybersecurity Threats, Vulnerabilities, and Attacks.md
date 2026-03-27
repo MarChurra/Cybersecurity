@@ -144,4 +144,29 @@
 - Hoaxes: An act inteded to deceive or trick someone, and can cause just as much disruption as an actuals ecurity breach.
 
 ### Piggybacking and Tailgating
-- Piggybacking or tailgating 
+- Piggybacking or tailgating occurs when a criminal follows an authorized person to gain physical entry into a secure location or a restricted area. Criminals can achieve this by:
+  - Giving the appearance of being escorted into the facility by an authorized person.
+  - Joining and pretending to be part of a large crowd that enters the facility.
+  - Targeting an authorized person who is careless about the rules of the facility.
+- One way of preventing this is to use two sets of doors. This is sometimes referred to as a mantrap and means individuals enter through an outer door, which must close before they can gain access through an inner door.
+
+### Other Methods of Deception
+- Invoice Scam: Fake invoices are sent with the goal of receiving money from a victim by prompting them to put their credentials into a fake login screen. The fake invoice may also include urgent or threatening language.
+- Watering Hole Attack: A watering hole attack describes an exploit in which an attacker observes or guesses what websites an organization uses most often, and infects one or more of them with malware.
+- Typosquatting: This type of attack relies on common mistakes such as typos made by individuals when inputting a website address into their browser. The incorrect URL will bring the individuals to a legitimate-looking website owned by the attacker, whose goal is to gather their personal or financial information.
+- Prepending - Attackers can remove the ‘external’ email tag used by organizations to warn the recipient that an email has originated from an external source. This tricks individuals into believing that a malicious email was sent from inside their organization.
+- Influence Campaigns - Often used in cyberwarfare, influence campaigns are usually very well coordinated and blend various methods such as fake news, disinformation campaigns and social media posts.
+
+## Cyber Attacks
+- Cybercriminals use many different types of malicious software, or malware, to carry out attacks. Malware is any code that can be used to steal data, bypass access controls or cause harm to or compromise a system. They are composed of:
+  - Viruses: A virus is a type of computer program that, when executed, replicates and attaches itself to other files, such as a legitimate program, by inserting its own code into it. Some viruses are harmless yet others can be destructive, such as those that modify or delete data. Most viruses require end-user interaction to initiate activation, and can be written to act on a specific date or time. Viruses can be spread through removable media such as USB flash drives, Internet downloads and email attachments. The simple act of opening a file or executing a specific program can trigger a virus. Once a virus is active, it will usually infect other programs on the computer or other computers on the network. Viruses mutate to avoid detection.
+  - Worms: A worm is a malicious software program that replicates by independently exploiting vulnerabilities in networks. Unlike a virus, which requires a host program to run, worms can run by themselves. Other than the initial infection of the host, they do not require user participation and can spread very quickly over the network, usually slowing it down. Worms share similar patterns: they exploit system vulnerabilities, they have a way to propagate themselves and they all contain malicious code (payload) to cause damage to computer systems or networks.
+  - Trojan Horses: A Trojan horse is malware that carries out malicious operations by masking its true intent. It might appear legitimate but is, in fact, very dangerous. Trojans exploit the privileges of the user who runs them. Unlike viruses, Trojans do not self-replicate but often bind themselves to non-executable files, such as image, audio or video files, acting as a decoy to harm the systems of unsuspecting users.
+
+### Logic Bombs
+- A logic bomb is a malicious program that waits for a trigger, such as a specified date or database entry, to set off the malicious code. Until this trigger event happens, the logic bomb will remain inactive.
+- Once activated, a logic bomb implements a malicious code that causes harm to a computer in various ways. It can sabotage database records, erase files and attack operating systems or applications.
+- Cybersecurity specialists have recently discovered logic bombs that attack and destroy the hardware components in a device or server, including the cooling fans, central processing unit (CPU), memory, hard drives and power supplies. The logic bomb overdrives these components until they overheat or fail.
+
+### Ransomware 
+- 
