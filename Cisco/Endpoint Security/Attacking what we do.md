@@ -73,4 +73,21 @@
   - Use a web proxy to block malicious sites. Secure all domain owner accounts with strong apsswords and 2FA.
 
 ### Email
-- 
+- Some types of attacks are:
+  - Attachment-based attacks: Threat actors embed malicious content in business files such as an email from the IT department. Legitimate users open malicious content. Malware is used in broad attacks often targeting a specific business vertical to seem legitimate, enticing users working in that vertical to open attachments, or click embedded links.
+  - Email spoofing: Threat actors create email messages with a forged sender address that is meant to fool the recipient into providing money or sensitive information. For example, a bank sends you an email asking you to update your credentials. When this email displays the identical bank logo as mail you have previously opened that was legitimate, it has a higher chance of being opened, having attachments opened and links clicked. The spoofed email may even ask you to verify your credentials so that the bank is assured that you are you, exposing your login information.
+  - Spam email: Threat actors send unsolicited email containing advertisements or malicious files. This type of email is sent most often to solicit a response, telling the threat actor that the email is valid and a user has opened the spam.
+  - open mail relay server: Threat actors take advantage of enterprise servers that are misconfigured as open mail relays to send large volumes of spam or malware to unsuspecting users. The open mail relay is an SMTP server that allows anybody on the internet to send mail. Because anyone can use the server, they are vulnerable to spammers and worms. Very large volumes of spam can be sent by using an open mail relay. It is important that corporate email servers are never set up as an open relay. This will considerably reduce the amount of unsolicited emails.
+  - Homohlyps: Threat actors can use text characters that are very similar or even identical to legitimate text characters. For example, it can be difficult to distinguish between an O (upper case letter O) and a 0 (number zero) or a l (lower case “L”) and a 1 (number one). These can be used in phishing emails to make them look very convincing. In DNS, these characters are very different from the real thing. When the DNS record is searched, a completely different URL is found when the link with the homoglyph is used in the search.
+- Just like any other service that is listening to a port for incoming connections, SMTP servers also may have vulnerabilities. Always keep SMTP software up to date with security and software patches and updates.
+
+### Web-Exposed Databases
+- Code Injection: Attackers are able to execute commands on a web server’s OS through a web application that is vulnerable. This might occur if the web application provides input fields to the attacker for entering malicious data. The attacker’s commands are executed through the web application and have the same permissions as the web application. This type of attack is used because often there is insufficient validation of input. An example is when a threat actor injects PHP code into an insecure input field on server page.
+- SQL Injection: SQL is the language used to query a relational database. Threat actors use SQL injections to breach the relational database, create malicious SQL queries, and obtain sensitive data from the relational database.
+
+### Client-side Scripting
+- Cross Site Scripting: Not all attacks are initiated from the server side. Cross-Site Scripting (XSS) is where web pages that are executed on the client-side, within their own web browser, are injected with malicious scripts. These scripts can be used by Visual Basic, JavaScript, and others to access a computer, collect sensitive information, or deploy more attacks and spread malware. As with SQL injection, this is often due to the attacker posting content to a trusted website with a lack of input validation. Future visitors to the trusted web site will be exposed to the content provided by the attacker.
+- They can be two types of XSS:
+  - Stored (persistent): This is permanently stored on the infected server and is received by all visitors to the infected page.
+  - Reflected (non-persistent): This only requires that the malicious script is located in a link and visitors must click the infected link to become infected.
+- TO avoid them, its important for developers to be aware of them, an IPS implementation, a web p+roxy or services that block these threats.
