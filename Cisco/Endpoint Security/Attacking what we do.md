@@ -7,7 +7,7 @@
 - The goal is to associate the threat actor’s MAC address with the IP address of the default gateway in the ARP caches of hosts on the LAN segment. This positions the threat actor in between the victim and all other systems outside of the local subnet.
 
 ### DNS Attacks
-- DNS Open Resolver attacks: Many organizations use the services of publicly open DNS servers such as GoogleDNS (8.8.8.8) to provide responses to queries. This type of DNS server is called an open resolver. A DNS open resolver answers queries from clients outside of its administrative domain.  They are vulnerable to DNS cache poisoning attacks, DNS amplication and relfection attacks, and DNS resource utilization attacks.
+- DNS Open Resolver attacks: Many organizations use the services of publicly open DNS servers such as GoogleDNS (8.8.8.8) to provide responses to queries. This type of DNS server is called an open resolver. A DNS open resolver answers queries from clients outside of its administrative domain.  They are vulnerable to DNS cache poisoning attacks, DNS amplication and reflection attacks, and DNS resource utilization attacks.
 - DNS stealth attacks:
   - Fast Flux: Threat actors use this technique to hide their phishing and malware delivery sites behind a quickly-changing network of compromised DNS hosts. The DNS IP addresses are continuously changed within minutes. Botnets often employ Fast Flux techniques to effectively hide malicious servers from being detected.
   - Double IP Flux: Threat actors use this technique to rapidly change the hostname to IP address mappings and to also change the authoritative name server. This increases the difficulty of identifying the source of the attack.
@@ -91,3 +91,66 @@
   - Stored (persistent): This is permanently stored on the infected server and is received by all visitors to the infected page.
   - Reflected (non-persistent): This only requires that the malicious script is located in a link and visitors must click the infected link to become infected.
 - TO avoid them, its important for developers to be aware of them, an IPS implementation, a web p+roxy or services that block these threats.
+
+## Mitigasting Common Network Attacks
+
+### Defending the Network
+- Constant vigilance and ongoing education are required to defend your network against attack. The following are best practices for securing a network:
+  1. Develop a written security policy for the company.
+  2. Educate employees about the risks of social engineering, and develop strategies to validate identities over the phone, via email, or in person.
+  3. Control physical access to systems.
+  4. Use strong passwords and change them often.
+  5. Encrypt and password-protect sensitive data.
+  6. Implement security hardware and software such as firewalls, intrusion prevention systems (IPS), virtual private network (VPN) devices, antivirus software, and content filtering.
+  7. Perform backups and test the backed-up files on a regular basis.
+  8. Shut down unnecessary services and ports.
+  9. Keep patches up-to-date by installing them weekly or daily, if possible, to prevent buffer overflow and privilege escalation attacks.
+  10. Perform security audits to test the network.
+
+### Mitigating Malware
+- Malware, including viruses, worms, and Trojan horses, can cause serious problems on networks and end devices. Network administrators have several means of mitigating these attacks.
+- Note: Mitigation techniques are often referred to in the security community as “countermeasures”.
+- One way of mitigating virus and Trojan horse attacks is antivirus software. Antivirus software helps prevent hosts from getting infected and spreading malicious code. It requires much more time to clean up infected computers than it does to maintain up-to-date antivirus software and antivirus definitions on the same machines.
+- Antivirus products have update automation options so that new virus definitions and new software updates can be downloaded automatically or on demand. This practice is the most critical requirement for keeping a network free of viruses and should be formalized in a network security policy.
+- Antivirus products are host-based. These products are installed on computers and servers to detect and eliminate viruses. However, they do not prevent viruses from entering the network, so a network security professional must be aware of the major viruses and keep track of security updates regarding emerging viruses.
+- Another way to mitigate malware threats is to prevent malware files from entering the network at all. Security devices at the network perimeter can identify known malware files based on their indicators of compromise. The files can be removed from the incoming data stream before they can cause an incident
+- Unfortunately, threat actors are aware of this countermeasure and frequently alter their malware enough that it evades detection. These exploits will enter the network and will also evade antivirus software. No mitigation technique can be 100% effective. Security incidents are going to happen.
+
+### Mitigating Worms
+- Worms are more network-based than viruses. Worm mitigation requires diligence and coordination on the part of network security professionals.
+- A worm attack can be broken down into four phases: containment, inoculation, quarantine, and treatment.
+  - Containement: The containment phase involves limiting the spread of a worm infection to areas of the network that are already affected. This requires compartmentalization and segmentation of the network to slow down or stop the worm and to prevent currently infected hosts from targeting and infecting other systems. Containment requires using both outgoing and incoming ACLs on routers and firewalls at control points within the network.
+  - Inoculation: The inoculation phase runs parallel to or subsequent to the containment phase. During the inoculation phase, all uninfected systems are patched with the appropriate vendor patch. The inoculation process further deprives the worm of any available targets.
+  - Quarantine: The quarantine phase involves tracking down and identifying infected machines within the contained areas and disconnecting, blocking, or removing them. This isolates these systems appropriately for the treatment phase.
+  - Treatment: The treatment phase involves actively disinfecting infected systems. This can involve terminating the worm process, removing modified files or system settings that the worm introduced, and patching the vulnerability the worm used to exploit the system. Alternatively, in more severe cases, the system may need to be reinstalled to ensure that the worm and its by-products are removed.
+ 
+### Mitigating Reconnaissance Attacks
+- Reconnaissance attacks are typically the precursor to other attacks that have the intent of gaining unauthorized access to a network or disrupting network functionality.
+- A network security professional can detect when a reconnaissance attack is underway by receiving notifications from preconfigured alarms
+- These alarms are triggered when certain parameters are exceeded, such as the number of ICMP requests per second. A variety of technologies and devices can be used to monitor this type of activity and generate an alarm.
+- They can be mitigated via:
+  - Implementing authentication to ensure proper access.
+  - Using encryption to render packet sniffer attacks useless.
+  - Using anti-sniffer tools to detect packet sniffer attacks.
+  - Implementing a switched infrastructure.
+  - Using a firewall and IPS.
+- Anti-sniffer software and hardware tools detect changes in the response time of hosts to determine whether the hosts are processing more traffic than their own traffic loads would indicate. While this does not completely eliminate the threat, as part of an overall mitigation system, it can reduce the number of instances of threat.
+- Encryption is also effective for mitigating packet sniffer attacks. If traffic is encrypted, using a packet sniffer is of little use because captured data is not readable.
+- It is impossible to mitigate port scanning but using an intrusion prevention system (IPS) and firewall can limit the information that can be discovered with a port scanner. Ping sweeps can be stopped if ICMP echo and echo-reply are turned off on edge routers; however, when these services are turned off, network diagnostic data is lost. Additionally, port scans can be run without full ping sweeps. The scans simply take longer because inactive IP addresses are also scanned.
+
+### Mitigating Access Attacks
+- Several techniques are available for mitigating access attacks. These include strong password security, principle of minimum trust, cryptography, and applying operating system and application patches.
+- A surprising number of access attacks are carried out through simple password guessing or brute-force dictionary attacks against passwords. To defend against this, create and enforce a strong authentication policy which includes:
+  - **Use strong passwords**
+  - **Disable accounts after a specified number of unsucessful login has ocurred.**
+- The network should also be designed using the principle of minimum trust. This means that systems should not use one another unnecessarily. For example, if an organization has a trusted server that is used by untrusted devices, such as web servers, the trusted server should not trust the untrusted devices unconditionally.
+- Cryptography is a critical component of any modern secure network. Using encryption for remote access to a network is recommended. Routing protocol traffic should also be encrypted. The more that traffic is encrypted, the fewer opportunities hackers have for intercepting data with man-in-the-middle attacks.
+- The use of encrypted or hashed authentication protocols, along with a strong password policy, greatly reduces the probability of successful access attacks.
+- In general, access attacks can be detected by reviewing logs, bandwidth utilization, and process loads. The network security policy should specify that logs are formally maintained for all network devices and servers. By reviewing logs, network security personnel can determine if an unusual number of failed login attempts have occurred.
+
+### Mitigating DoS Attacks
+- One of the first signs of a DoS attack is a large number of user complaints about unavailable resources or unusually slow network performance
+-  To minimize the number of attacks, a network utilization software package should be running at all times. Network behavior analysis can detect unusual patterns of usage that indicate that a DoS attack is occurring. A means of detecting unusual network behavior should be required by the organization’s network security policy
+-  A network utilization graph showing unusual activity could also indicate a DoS attack.
+-  DoS attacks could be a component of a larger offensive. DoS attacks can lead to problems in the network segments of the computers being attacked. For example, the packet-per-second capacity of a router between the internet and a LAN might be exceeded by an attack, compromising not only the target system but also the network devices that the traffic must pass through. If the attack is conducted on a sufficiently large scale, entire geographical regions of internet connectivity could be compromised.
+-  Historically, many DoS attacks were sourced from spoofed addresses. Cisco routers and switches support a number of antispoofing technologies, such as port security, Dynamic Host Configuration Protocol (DHCP) snooping, IP Source Guard, Dynamic Address Resolution Protocol (DAI) Inspection, and access control lists (ACLs).
