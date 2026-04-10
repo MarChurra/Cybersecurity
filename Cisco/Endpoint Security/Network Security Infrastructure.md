@@ -128,4 +128,6 @@
   - They provide a basic level of security for network access. ACLs can allow one host to access a part of the network and prevent another host from accessing the same area. For example, access to the Human Resources network can be restricted to authorized users.
   - They filter traffic based on traffic type. For example, an ACL can permit email traffic, but block all Telnet traffic.
   - They screen hosts to permit or deny access to network services. ACLs can permit or deny a user to access file types, such as FTP or HTTP.
-    
+  - In addition to either permitting or denying traffic, ACLs can be used for selecting types of traffic to be analyzed, forwarded, or processed. Can be enabled to give priority processing.
+
+### ACLs: Important Features 
