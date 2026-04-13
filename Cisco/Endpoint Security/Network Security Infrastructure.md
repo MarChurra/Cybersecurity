@@ -131,3 +131,74 @@
   - In addition to either permitting or denying traffic, ACLs can be used for selecting types of traffic to be analyzed, forwarded, or processed. Can be enabled to give priority processing.
 
 ### ACLs: Important Features 
+- Two types of Cisco IPv4 ACLs are standard and extended. Standard ACLs can be used to permit or deny traffic only from source IPv4 addresses. The destination of the packet and the ports involved are not evaluated.
+- Extended ACLs filter IPv4 packets based on several attributes that include:
+  - Protocol Type
+  - Source IPv4 address
+  - Destination IPv4 address
+  - Source TCP or UDP ports
+  - Destination TCP or UDP ports
+  - Optional protocol type information for finer control
+- Standard and extended ACLs can be created using either a number or a name to identify the ACL and its list of statements.
+- Using numbered ACLs is an effective method for determining the ACL type on smaller networks with more homogeneously defined traffic. However, a number does not provide information about the purpose of the ACL. For this reason, a name can be used to identify a Cisco ACL.
+- By configuring ACL logging, an ACL message can be generated and logged when traffic meets the permit or deny criteria defined in the ACL.
+- Cisco ACLs can also be configured to only allow TCP traffic that has an ACK or RST bit set, so that only traffic from an established TCP session is permitted. This can be used to deny any TCP traffic from outside the network that is trying to establish a new TCP session.
+
+### SNMP
+- Simple Network Management Protocol (SNMP) allows administrators to manage end devices such as servers, workstations, routers, switches, and security appliances, on an IP network.
+- It eenables network administrators to monitro and manage network performance, find and solve network problems, and plan for network growth.
+- SNMP is an application layer protocol that provides a message format for communication between managers and agents.
+- It consists of:
+  - SNMP manager that runs SNMP management software.
+  - SNMP agents which are the nodes being monitored and managed.
+- The Management Information Base (MIB) is a database on the agents that stores data and operational statistics about the device.
+- To configure SNMP on a networking device, it is first necessary to define the relationship between the manager and the agent.
+- The SNMP manager is part of a network management system (NMS)
+
+### NetFlow
+- NetFlow is a Cisco IOS technology that provides statistics on packets flowing through a Cisco router or multilayer switch.
+- While SNMP attempts to provide a very wide range of network management features and options, NetFlow is focused on providing statistics on IP packets flowing through network devices.
+- NetFlow provides data to enable network and security monitoring, network planning, traffic analysis to include identification of network bottlenecks, and IP accounting for billing purposes.
+- NetFlow can monitor that application connection, tracking byte and packet counts for that individual application flow. It then pushes the statistics over to an external server called a NetFlow collector.
+
+### Port Mirroring
+- A packet analyzer (also known as a packet sniffer or traffic sniffer) is typically software that captures packets entering and exiting the network interface card (NIC).
+- It is not always possible or desirable to have the packet analyzer on the device that is being monitored. Sometimes it is better on a separate station designated to capture the packets.
+- Because network switches can isolate traffic, traffic sniffers or other network monitors, such as IDS, cannot access all the traffic on a network segment.
+- Port mirroring is a feature that allows a switch to make duplicate copies of traffic passing through a switch, and then send it out a port with a network monitor attached
+
+### Syslog Servers
+- When certain events occur on a network, networking devices have trusted mechanisms to notify the administrator with detailed system messages.
+- These messages can be either non-critical or significant
+- Network administrators have a variety of options for storing, interpreting, and displaying these messages, and for being alerted to those messages that could have the greatest impact on the network infrastructure.
+- The most common method of accessing system messages is to use a protocol called syslog.
+- Many networking devices support syslog, including routers, switches, application servers, firewalls, and other network appliances. The syslog protocol allows networking devices to send their system messages across the network to syslog servers
+
+### NTP 
+- It is important to synchronize the time across all devices on the network because all aspects of managing, securing, troubleshooting, and planning networks require accurate and consistent timestamping. When the time is not synchronized between devices, it will be impossible to determine the order of the events that have occurred in different parts of the network.
+- Typically, the date and time settings on a network device can be set using one of two methods:
+  - Manual
+  - Configuring the Network Time Protocol
+- A better solution is to configure the NTP on the network. This protocol allows routers on the network to synchronize their time settings with an NTP server. A group of NTP clients that obtain time and date information from a single source have more consistent time settings. When NTP is implemented in the network, it can be set up to synchronize to a private primary clock or it can synchronize to a publicly available NTP server on the Internet.
+- NTP networks use a hierarchical system of time sources. Each level in this hierarchical system is called a stratum. The stratum level is defined as the number of hop counts from the authoritative source. The synchronized time is distributed across the network using NTP.
+- NTP servers are arranged in three levels known as strata:
+  - Stratum 0:  An NTP network gets the time from authoritative time sources. These authoritative time sources, also referred to as stratum 0 devices, are high-precision timekeeping devices assumed to be accurate and with little or no delay associated with them.
+  - Stratum 1: -The stratum 1 devices are directly connected to the authoritative time sources. They act as the primary network time standard.
+  - Stratum 2 and lower strata: The stratum 2 servers are connected to stratum 1 devices through network connections. Stratum 2 devices, such as NTP clients, synchronize their time using the NTP packets from stratum 1 servers. They could also act as servers for stratum 3 devices.
+  - Smaller stratum numbers indicate that the server is closer to the authorized time source than larger stratum numbers. The larger the stratum number, the lower the stratum level. The max hop count is 15. Stratum 16, the lowest stratum level, indicates that a device is unsynchronized. Time servers on the same stratum level can be configured to act as a peer with other time servers on the same stratum level for backup or verification of time.
+ 
+### AAA Servers
+- Authentication: Users and administrators must prove that they are who they say they are., via password and username combinations, challenges, response questions, tokens and so on. It provides a centralized way to control access to the network.
+- Authorization: After authentication, authorization defines which resources the authenticated user has access to and actions he can perform.
+- Accounting: Accounting records what the user does, including what is accessed, the amount of time the resource is accessed, and any changes that were made. Accounting keeps track of how network resources are used.
+- TACAS+ or RADIUS are two options that are utilized to communicate with AAA servers.
+- TACAS+ is considered the more secure protocol, since communications are encrpyted. In Radius only the credentials are encrypted.
+
+### VPN
+- A VPN is a private network that is created over a public network, usually the internet
+- Instead of using a dedicated physical connection, a VPN uses virtual connections that are routed through the internet from the organization to the remote site.
+- A VPN is virtual in that it carries information within a private network, but that information is actually transported over a public network. A VPN is private in that the traffic is encrypted to keep the data confidential while it is transported across the public network.
+- A VPN is a communications environment in which access is strictly controlled to permit peer connections within a defined community of interest. Confidentiality is achieved by encrypting the traffic within the VPN. Today, a secure implementation of VPN with encryption is what is generally equated with the concept of virtual private networking.
+- n the simplest sense, a VPN connects two endpoints, such as a remote office to a central office, over a public network, to form a logical connection. The logical connections can be made at either Layer 2 or Layer 3. Common examples of Layer 3 VPNs are GRE, Multiprotocol Label Switching (MPLS), and IPsec. Layer 3 VPNs can be point-to-point site connections, such as GRE and IPsec, or they can establish any-to-any connectivity to many sites using MPLS.
+- IPsec services allow for authentication, integrity, access control, and confidentiality. With IPsec, the information exchanged between remote sites can be encrypted and verified
+-  VPNs are commonly deployed in a site-to-site topology to securely connect central sites with remote locations. They are also deployed in a remote-access topology to provide secure remote access to external users travelling or working from home. Both remote-access and site-to-site VPNs can be deployed using IPsec.
