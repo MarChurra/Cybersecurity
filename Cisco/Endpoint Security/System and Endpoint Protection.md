@@ -29,4 +29,39 @@
   - Signature-Based: This approach recognizes various characetristics of known malware files
   - Heuristics-Based: This approach recognizes general features shared by various type of malware.
   - Behaviour-based: This approach employs analysis of suspicious behaviour
+- Host-based antivirus protection is also known as agent-based. Agent-based antivirus runs on every protected machine.
+- Agentless antivirus protection performs scans on hosts from a centralized system.
+- Agentless systems have become popular for virtualized environments in which multiple OS instances are running on a host simultaneously-
+- One approach to intrusion prevention is the use of distributed firewalls. Distributed firewalls combine features of host-based firewalls with centralized management. The management function pushes rules to the hosts and may also accept log files from the hosts.
+
+### Host-Based Intrustion Detection Architecture 
+-  The distinction between host-based intrusion detection and intrusion prevention is blurred. In fact, some sources refer to host-based intrusion detection and prevention systems (HIPDS). Because the industry seems to favor the use of the acronym HIDS,
+-  A host-based intrusion detection system (HIDS) is designed to protect hosts against known and unknown malware. A HIDS can perform detailed monitoring and reporting on the system configuration and application activity. It can provide log analysis, event correlation, integrity checking, policy enforcement, rootkit detection, and alerting. A HIDS will frequently include a management server endpoint.
+-  A HIDS is a comprehensive security application that combines the functionalities of antimalware applications with firewall functionality. A HIDS not only detects malware but also can prevent it from executing if it should reach a host. Because the HIDS software must run directly on the host, it is considered an agent-based system.
+
+### HIDS Operation
+-  Polymorhpism: This means that variations of a type, or family, of malware may be created by attackers that will evade signature-based detections by changing aspects of the malware signature just enough so that it will not be detected.
+-  An additional set of strategies are used to detect the possibility of successful intrusions by malware that evades signature detection:
+  - Anomaly-based: Host system behavior is compared to a learned baseline model of normal behavior. Significant deviations from the baseline are interpreted as the result of some sort of intrusion.
+  - Policy-based: Normal system behavior is described by rules, or the violation of rules, that are predefined. Violation of these policies will result in action by the HIDS
+
+## Application Security
+
+### Attack Surface
+- Recall that a vulnerability is a weakness in a system or its design that could be exploited by a threat. An attack surface is the total sum of the vulnerabilities in a given system that is accessible to an attacker.
+- The attack surface can consist of open ports on servers or hosts, software that runs on internet-facing servers, wireless network protocols, and even users.
+- The attack surface is continuing to expand, as shown in the figure. More devices are connecting to networks through the Internet of Things (IoT) and Bring Your Own Device (BYOD)
+- Much of network traffic now flows between devices and some location in the cloud. Mobile device use continues to increase. All of these trends contribute to a prediction that global IP traffic will increase threefold in the next five years.
+- The SANS Institute describes three components of the attack surface:
+  - Network Attack Surface: The attack exploits vulnerabilities in networks. This can include conventional wired and wireless network protocols, as well as other wireless protocols used by smartphones or IoT devices. Network attacks also exploit vulnerabilities at the network and transport layers.
+  - Software Attack Surface: The attack is delivered through exploitation of vulnerabilities in web, cloud, or host-based software applications.
+  - Human Attack Surface: The attack exploits weaknesses in user behavior. Such attacks include social engineering, malicious behavior by trusted insiders, and user error.
+
+### Application Block and Allow List
+- One way of decreasing the attack surface is to limit access to potential threats by creating lists of prohibited applications. This is known as blocklisting.
+- Allow lists are created in accordance with a security baseline that has been established by an organization. The baseline establishes an accepted amount of risk, and the environmental components that contribute to that level of risk. Non-allowlisted software can violate the established security baseline by increasing risk.
+- Websites can also be whitelisted and blacklisted. These blacklists can be manually created, or they can be obtained from various security services. Blacklists can be continuously updated by security services and distributed to firewalls and other security systems that use them.
+
+### Sandboxing
+- Sandboxing is a technique that allows suspicious files to be executed and analyzed in a safe environment. Automated malware analysis sandboxes offer tools that analyze malware behavior. These tools observe the effects of running unknown malware so that features of malware behavior can be determined and then used to create defenses against it.
 - 
