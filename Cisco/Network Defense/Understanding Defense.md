@@ -85,3 +85,31 @@
   - Obscurity: Obscuring information can also protect data and information. An organization should not reveal any information that cybercriminals can use to identify which Operating System (OS) a server is running, or the type or make of equipment or software it uses.
   - Simplicity: Complexity does not necessarily guarantee security. If an organization implements complex systems that are hard to understand and troubleshoot, this may backfire. If employees do not understand how to configure a solution properly, such as setting up their account using an unnecessarily complex process, this may make it just as easy for cybercriminals to compromise those systems.
   
+### Configuration Management
+- Configuration management refers to identifying, controlling and auditing the implementation and any changes made to a system’s established baseline.
+- The baseline configuration includes all the settings that you configure for a system which provide the foundation for all similar systems — like a template of sorts.
+- For instance, those responsible for deploying Windows workstations to users must install the required applications and set up the system settings according to a documented configuration. This is the baseline configuration for Windows workstations within this organization.
+
+### Log Files
+- A log records all events as they occur. Log entries make up a log file, with each log entry containing all the information related to a specific event. Accurate and complete logs are very important in cybersecurity.
+- For example, an audit log tracks user authentication attempts, while an access log records details on requests for specific files on a system. Monitoring system logs will therefore help us determine how an attack occurred and which of the defenses deployed were successful — and which were not.
+- As an increasing number of log files are generated for computer security purposes, organizations should consider a log management process. Management of computer security log data should determine the procedures for the following:
+  - Generating log files
+  - Transmitting log files
+  - Storing log files
+  - Analyzing log data
+  - Disposing of log data
+
+### Protocol Analyzers
+- Packet analyzers, otherwise known as packet sniffers, intercept and log network traffic.
+- The packet analyzer captures each packet, looks at the values of various fields in the packet and analyzes its content. It can capture network traffic on both wired and wireless networks.
+- They can:
+  - Traffic logging
+  - Network problem analysis
+  - Detection of network misuse
+  - Detection of network intrusion attempts
+  - Isolation of exploited systems
+ 
+## Security Policies, Regulations and Standards
+
+### Business Policies
