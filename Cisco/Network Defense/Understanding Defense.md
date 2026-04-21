@@ -113,3 +113,28 @@
 ## Security Policies, Regulations and Standards
 
 ### Business Policies
+- These policies are the guidelines that are developed by an organization to govern its actions. The policies define standards of correct behavior for the business and its employees.
+- In networking, policies define the activities that are allowed on the network. This sets a baseline of acceptable use.
+
+### Security Policy
+- A comprehensive security policy has a number of beenfits:
+  - Demonstrates an organization´s commitment to security
+  - Sets the rules for expected behavior
+  - Ensures consistency in system operations, software and hardware acquisiton and use, and maintenance
+  - Defines the legal consequences of violations
+  - Gives security staff the backing of management
+ 
+### BYOD policies
+- This allows employees to use their own mobile devices to access company systems, software, networks, or information.
+- A BYOD security policy should be developed to accomplish the following:
+  - Specify the goals of the BYOD program.
+  - Identify which employees can bring their own devices.
+  - Identify which devices will be suported
+  - Identify the level of access employees are granted when using personal devices.
+  - Describe the rights to access and activties permitted to security personnel on the device.
+  - Identify which regulations must be adhered to when using employee devices.
+  - Identify safeguards to put in place if a device is compromised.
+ 
+  ### Regulatory and Standards Compliance
+  - There are also external regulations regarding network security. Network security professionals must be familiar with the laws and codes of ethics that are binding on Information Systems Security (INFOSEC) professionals.
+  - Many organizations are mandated to develop and implement security policies. Compliance regulations define what organizations are responsible for providing and the liability if they fail to comply. The compliance regulations that an organization is obligated to follow depend on the type of organization and the data that the organization handles.
