@@ -138,3 +138,97 @@
 - VLANs provide a way to group devices within a LAN and on individual switches.
 - VLANs are based on logical connections, while LANs are based on physical connections.
 - Other ports can be used to physically interconnect switches and allow multiple VLAN traffic between switches. These ports are called trunks.
+- The network is segmented, based on factors such as function, project team or application. Devices within a VLAN act as if they are in their own independent network, even though they share a common infrastructure with other VLANs on the same LAN. A VLAN can separate groups of devices that host sensitive data from the rest of the network, decreasing the chances of confidential information breaches.
+- VLANs provide a way to limit broadcast traffic in a switched network.
+
+### Demilitarized Zone
+- A DMZ is a small network between a trusted private network and the internet.
+- Web servers and mail servers are usually placed within the DMZ to allow users to access an untrusted network, such as the Internet, without compromising the internal network.
+- Most networks have two to four zones of risk , the trusted private LAN, the DMZ, the Internet and an extranet. Each zone has its own risk and trust meter.
+- Firewalls manage east-west traffic (traffic that goes between servers within the organizations data center) and north-south traffic (data moving into and out of the organization network).
+- To protect its network, an organization can implement a Zero Trust Model. Automatically trusting users and endpoints within the organization can put any network at risk, as trusted users can move throughout the network to access data. Zero trust constantly monitors all users on the network, regardless of status and role.
+
+## Hardening Wireless and Mobile Devices
+- WPA servers as an upgrade to the defunct WEP standard. WPA-PSK (Pre-Shared Key) is the most common WPA configuration. The keys used by WPA are 256-bit, a significant increase over the 64-bit and 128-bit keys used in the WEP system.
+- First, WPA provided message integrity checks (MIC), which could detect if an attacker had captured and altered data passed between the wireless access point and a wireless client.
+- Another key security enhancement was Temporal Key Integrity Protocol (TKIP). The TKIP standard helped to better handle, protect and change encryption keys. Advanced Encryption Standard (AES) superseded TKIP, for even better key management and encryption protection.
+
+### Authentication
+- The best way to secure a wireless network is to use authentication and encryption. The original wireless standard, 801.11, introduced two types of authentication:
+  - Open System Authentication: Any wireless device can connect to the wireless network.
+  - Shared Key authentication: Provides mechanism to authenticate and encrypt data between a wireless client and AP or wireless router.
+
+### Authentication Protocols
+- The EAP Extensible Authentication Protocol is an authentication framework used in wireless networks.
+  1. The user requests to connect to the wireless network through an access point.
+  2. The access point requests identification data (username) from the user, which is then sent to an authentication server.
+  3. The authentication server requests proof that the ID is valid.
+  4. The access point requests proof that the ID is valid from the user, in the form of a password.
+  5. The user supplies the access point with their password. The access point sends this back to the authentication server.
+  6. The server confirms the username and password are correct, and passes this information on to the access point and user.
+  7. The user connects to the wireless network.
+ 
+- These are four protocols used with EAP to provide authentication for wireless networks:
+  - EAP-TLS: Requires Client and Server certificates. Difficult to deploy and has high security
+  - PEAP: Only requires server certificate. Moderate to deploy and medium security.
+  - EAP-TTLS: Same as above
+  - EAP-FAST: Does not require certificates. Easy to deploy, medium security.
+ 
+### Mutual Authentication
+- Your wireless network and its sensitive data are susceptible to unauthorized access by hackers using a wireless connection. But what can you do to prevent an attack?
+- An access point is any hardware device that enables other wireless devices to connect to a wired network. Any device that has a wireless transmitter and hardwired interface to a network can potentially act as a rogue or unauthorized access point.
+- The rogue access point will often imitate an authorized access point, allowing users to connect to the wireless network but potentially stealing their data or conducting other nefarious activity in the process.
+- When you connect to a rogue access point, the imposter who set it up can request and copy data from your device. This type of man-in-the-middle attack is very difficult to detect and can result in stolen login details and data.
+- Mutual authentication is two-way authentication that can prevent rogue access points. It is a process in which both entities in a communications link authenticate each other before they connect. This enables clients to detect rogue access points and prevent such MitM attacks.
+
+### Communiucation Methods
+- Wi-fi and Bluetooth
+- NFC: These chips sue electromagnectic fields to enable contactless payments.
+- Infrared: A short-range communication using an IR Rreceiver.
+- USB communication
+
+### Mobile Device Management
+- A mobile device issued by an organization can contain both personal and organizational data. It can be corporate-owned or corporate-owned personally enabled COPE.
+- An organization can also implement BYOD options.
+- Security and data protection policies need to be applied when there is sensitive corporate information on a user’s device.
+- Storage segmentation and containerization allow you to separate personal and work content on a device. It provides an authenticated, encrypted area that sepparates sensitive company information from the user-s personal data. It also allows to isolate apps, control app functions, delete contaioner information, remotely wipe the device.
+- Content Management: An organization needs to consider the security risks involved in using applications that share data — for example, Dropbox, Box, Google Drive and iCloud. An identity-management security system can be used to control what data a user can access.
+- Application Management: Whitelisting allows you to digitally sign applications so that you can authorize which applications users can install. This helps to ensure that installed applications come from a trusted source.
+
+### Mobile Device Protections
+- Jailbreaking removes the restriction that only Apple-authorized apps may run on the device. Rooting bypasses Android’s security architecture to allow complete, administrative access to the device. Both pose a risk to the organization.
+- Solutions are available that can detect a jailbroken or rooted device. A device is then marked as noncompliant and removed from the network or denied access to organizational apps.
+- Third-party app stores can also pose a risk for organizations because the apps they provide access to have not been evaluated properly. Sideloading occurs when the user goes around the approved app settings to install unapproved apps. This is less invasive than jailbreaking or rooting, but it is still a risk.
+- Safeguards against mobile device threats include Screen locks, Biometric authentication, Context-aware authentication (uses machine learning to determine access based on a users normal behavior), remote wiping and Full Device encryption.
+
+### GPS Tracking
+- Global Positioning System (GPS) uses satellites and computers to determine the location of a device. GPS technology is a standard feature on smartphones and provides real-time position tracking that can typically pinpoint a location to within approximately 5 meters.
+- Some apps use geofencing or geolocation, which use radio-frequency identification (RFID) to determine a geographic area instead.
+
+## Cybersecurity Resilience
+
+### High Availability
+- The term ‘high availability’ describes systems designed to avoid downtime as much as possible. The continuous availability of information systems is imperative, not only to organizations but to modern life, as we are all using and relying on computer and information systems more than ever before.
+- High availability systems typically are based on three design principles.
+  - Eliminating Single points of Failure: The first principle that defines high availability systems starts with identifying all system devices and components whose failure would result in system-wide failure. Methods to eliminate single points of failure include replacing or removing hot stand-by devices, redundant components and multiple connections or pathways.
+  - Providing for Reliable Crossover: Redundant power supplies, backup power systems and backup communications systems all provide for reliable crossover — the second design principle.
+  - Detecting Failures as they occur: The third principle is active device and system monitoring to detect many types of events including system and device failures. Monitoring systems may even trigger the backup system in the case of failure.
+ 
+### The Five Nines
+- One of the most popular high availability goals is often called ‘five nines.’ It gets its name from its aim to achieve an availability rate of 99.999%, which is five nines in a row. In practice, this means that downtime is less than 5.26 minutes per year.
+- This is accomplished by:
+  - Standardized Systems: Systems standardization provides for systems that use the same components. As a result, parts inventories are easier to maintain and it is possible and easy to swap components, even during an emergency.
+  - Clustering: Multiple devices grouped together provide a service that, to users, appears to be a single entity. If one device in a cluster fails, the other devices remain available and can step in.
+  - Shared Component Systems: Systems are built so that a complete system can stand in for one that failed.
+ 
+### Single Points of Failure
+- Single points of failure are weak links in the chain that can cause disruption of the organization's operations. A single point of failure is any part of the operation of the organization whose failure means complete failure of the entire system — in other words, if it fails, the entire system fails.
+- A single point of failure can be a specific piece of hardware, a process, a specific piece of data, or even an essential utility. Generally, the solution to a single point of failure is to modify the critical operation so that it does not rely on any single element. The organization can also build redundant components into the operation to take over the process should one of these points fail.
+
+### N+1 Redundancy
+- N+1 Redundancy helps ensure system availability in the event of a component failure. It means that componetns N need to have at least one backup component +1,
+- A good way to think about this is that a car has four tires (N) and a spare tire (+1) in the trunk in case of a flat.
+- Although a system using N+1 architecture contains redundant equipment, it is not a fully redundant system.
+
+### RAID
+- 
