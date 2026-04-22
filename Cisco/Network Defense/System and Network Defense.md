@@ -68,5 +68,73 @@
 -  Hackers can automate this attack to flood the web application with thousands of invalid subscribers to the newsletter database.
 
 ### Validation Rules
-- 
-  - 
+- A validation rule checks that data falls within the parameters defined by the database designer. A validation rule helps to ensure the completeness, accuracy and consistency of data.
+- The criteria used in a validation rule include the following:
+  - Size: Checks the numbers of characters in a data item
+  - Format: Checks that the data conforms to a specific format
+  - Consistency: Checks for the consistency of odes in related data items.
+  - Range: Checks that data lies within a minimum and maximum value
+  - Check digit: provides for an extra caltucation to generate a check digit for error detection.
+ 
+### Integrity Checks
+- Compromised data can threaten the security of your devices and systems.
+- An inteigty check can measure the consistency of data in a file, to ensure that it has not been corrupted.
+- The inteigrty check performs a hash function, to take a snapshot of data and then uses this snapshot to ensure data has remained unchanged.
+- A cheksum is an example of a hash function.
+- Use of version control, meaning that two users cannot update the same object, at the exact same time. While keeping a log of past versions of the file.
+- The utilization of Backups (need to be verified regularly) and Authorization.
+
+### Other Application Security Practices
+- Code Signing: Helps prove that a piece of software is authentic. Executables designed to install and run on a device are digitally signed to validate the author´s identity and provide assurance that the software code has not changed since it was signed.
+- Secure Cookies: Protect information stored in cookies from hackers. This means using HTTPS tow ork with cookies.
+
+## Network Hardening: Services and Protocols
+
+### Network and Routing Services
+- Cybercriminals use vulnerable network services to attack a device or to use it as part of an attack. To check for insecure network services, use a port scanner to detect open ports on a device. A port scanner sends a message to each port and waits for a response, which indicates how the port is used and whether it is open.
+- But beware, cybercriminals also use port scanners for this same reason! Securing network services ensures that only necessary ports are exposed and available.
+- Here are some precautions to ensure:
+  
+  - DHCP:
+    - Secure the DHCP server physically, apply software patches.
+    - Locate the DHCP server behind a firewall
+    - Minitor DHCP activity by reviewing DHCP logs.
+    - Maintain a strong antirivurs solution
+    - Uninstall any unusued services and applications
+    - Close unsued ports
+      
+- DNS:
+  - Attackers can target DNS servers to deny access to network recoures or redirect traffic to rogue websites.
+  - Use secure service and authentication between DNS servers to protect them from these attacks.
+  - DNS Security Extensions uses digital signatures to strengthen authentication and protect against threats to the DNS.
+  - Keep the DNS software up to date.
+  - Prevent version string from revealing information.
+  - Separate internal and external DNS servers.
+  - Restrict allowed transactions by client IP address
+  - Use transaction signatures to authenticate transactions.
+  - Disable or restrict zone transfers and dynamic updates.
+  - Enable logging and analyze logs
+  - Use Domain Name SYstem Security Extensions
+  - Sign Zones
+ 
+- ICMP:
+  - Network device uses ICMP to send error messages, that a requested service is not available or the host could not reach the router.
+  - The ping command is a network utility that uses ICMP to test the reachability of a host on a network. Ping sends ICMP messages to the host and waits for a reply. Cybercriminals can alter the use of ICMP to run reconnaissance, denial of service (DoS) and covert channel attacks. Many networks filter ICMP requests to prevent such attacks.
+- Routing Information Protocol RIP:
+  - RIP is a routing protocol that limits the number of hops from source to destination that are allowed in a network path. The maximum number of hops allowed for RIP is fifteen. RIP is used to exchange routing information about which networks each router can reach and how far away those networks are.
+  -  RIP calculates the best route based on hop count, but cybercriminals can also target routers and the RIP protocol. Such attacks on routing services can affect performance and availability, some attacks can even result in traffic redirection. Use secure services with authentication and implement system patching and updates to protect routing services.
+- NTP:
+  - Having the correct time within networks is important. Correct timestamps accurately track network events such as security violations. Additionally, clock synchronization is critical for the correct interpretation of events within syslog data files as well as for digital certificates.
+  - Network Time Protocol (NTP) is a protocol that synchronizes network computer system clocks. NTP allows network devices to synchronize their time settings with an NTP server. Cybercriminals attack timeservers to disrupt secure communication that depends on digital certificates and to hide attack information. Use NTP Authentication to verify that the server is trusted.
+ 
+### Telnet, SSH, and SCP
+- Secure Shell (SSH) is a protocol that provides a secure (encrypted) remote connection to a device. Telnet is an older protocol that uses unsecure plaintext when authenticating a device (user name and password) and transmitting data. SSH should be used rather than Telnet to manage connections, as it provides strong encryption. SSH uses TCP port 22. Telnet uses TCP port 23.
+- Secure copy (SCP) securely transfers files between two remote systems. SCP uses SSH for data transfer and authentication, ensuring the authenticity and confidentiality of the data in transit.
+
+## Network Hardening: Segmentation
+
+### Virtual Local Area Networks
+- A VLAN segments the network and creates a secure area for the sensitive data.
+- VLANs provide a way to group devices within a LAN and on individual switches.
+- VLANs are based on logical connections, while LANs are based on physical connections.
+- Other ports can be used to physically interconnect switches and allow multiple VLAN traffic between switches. These ports are called trunks.
