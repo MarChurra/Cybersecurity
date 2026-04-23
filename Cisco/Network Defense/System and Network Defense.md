@@ -231,4 +231,116 @@
 - Although a system using N+1 architecture contains redundant equipment, it is not a fully redundant system.
 
 ### RAID
-- 
+- Raid Level 0: Min of 2 Drives. Data striping without redundancy. has highest performance, but no data protection.
+- Raid Level 1: Min of 2 Drive, uses disk mirroring. Highest performance, high data protection because data is duplicated. Has an higher cost of implementation
+- Raid Level 2: Error-Correcting Coding: No longer used, same performance can be acheved at a lower cost with Raid 3.
+- Raid Level 3: Min of 3 Drives. Byte level data striping with dedicated parity. It is for large, sequential data requests. Does not support multiple simultaneous read and write requests.
+- Raid Level 4: Block-level data striping with dedicated parity . Supports multiple read requests. If a disk fails, the deicated parity disk is used to create a replacement disk. Write request are bottlecked due to the dedicated parity drive.
+- Raid level 5: Combination of data striping and parity. Suppports multiple simultaneouus reads and writes, but sllower performance.
+
+- Raid takes data that is normally stored on a single disk and spreads it out among several drives. Except for RAID 0, if any single disk is lost, the user can recover data from the other disks where the data also resides.
+- RAID can also increase the speed of data recovery as multiple drives will be faster retrieving requested data than one disk doing the same.
+- A RAID solution can be either hardware-based or software-based. A hardware-based solution requires a specialized hardware controller on the system that contains the RAID drives, while software RAID is managed by utility software in the OS.
+- The following terms describe the various ways RAID can store data in the array of disks.
+- Mirroring — Stores data, then duplicates and stores the same on a second drive.
+- Striping — Writes data across multiple drives so that consecutive segments are stored on different drives.
+- Parity — More precisely, striping with parity. After striping, checksums are generated to check that no errors exist in the striped data. These checksums are stored on a third drive.
+
+### Spanning Tree
+- Redundancy increases the availability of the infrastructure by protecting the network from a single point of failure, such as a failed network cable or a failed switch.
+- But when designers build physical redundancy into a network, loops and duplicate frames occur. Loops and duplicate frames have severe consequences for a switched network
+- The Spanning Tree Protocol (STP) addresses these issues. Its basic function is to prevent loops on a network when switches interconnect via multiple paths. STP ensures that redundant physical links are loop-free and only one logical path runs between all destinations on the network. To do this, STP intentionally blocks redundant paths that could cause a loop.
+- Blocking the redundant paths is critical to preventing loops on the network. The physical paths still exist to provide redundancy, but STP disables these paths to prevent the loops from occurring. If a network cable or switch fails, STP recalculates the paths and unblocks the necessary ports to allow the redundant path to become active.
+
+### Router Redundancy
+- The default gateway is typically the router that provides devices access to the rest of the network and/or to the internet. If there is only one router serving as the default gateway, it is a single point of failure. To avoid this, an organization can choose to install an additional standby router.
+- A redundancy protocol determines which router should take the active role in forwarding traffic; the forwarding router or the standby router? Each is configured with a physical IP address and a virtual router IP address. End devices use the virtual IP address as the default gateway, which is 192.0.2.100.
+- The forwarding router and the standby router use their physical IP addresses to send periodic messages. The purpose of these messages is to make sure both are still online and available.
+- If the standby router stops receiving these periodic messages from the forwarding router, it realizes it is the only router available and assumes the forwarding role for itself. Meanwhile, because the PCs on the network still communicate with the virtual router at 192.0.2.100, they stay online despite everything that has happened, since the virtual router now forwards to what was previously the standby router.
+- The ability of a network to dynamically recover from the failure of a device acting as a default gateway is known as first-hop redundancy,
+
+### Location REdundancy
+- Synchronous Replication: Syncronizes both locations in real time. Requires high bandiwdth. Locations must be close together.
+- Asynchronous Replication: Not synced in real time, but close ot it. Requires less bandiwdth. Sites can be further apert.
+- Point in Time Replication: Updates the backup data location priodically, at certain points in time.
+- More bandiwdth conservative because it does not require a constant connections.
+
+### Resilient Design
+- Resiliency is the name given to the methods and configurations used to make a system or network tolerant of failure.
+- An example of resiliency is a network having redundant links between switches running STP. Although STP does provide an alternate path through the network if a link fails, the switchover may not be immediate if the configuration is not optimal, so these redundant links together with STP provide more resiliency.
+- Routing protocols also provide resiliency, but fine-tuning can improve the switchover so that network users do not notice. Administrators should investigate non-default settings in a test network to see if they can improve network recovery times, thus leading to minimal disruption.
+- As seen in the above examples, resilient design is about more than just adding redundancy. It is critical to understand the business needs of the organization and then incorporate redundancy to create a resilient network.
+- Application REsilience: Application resilience is an application’s ability to react to component problems while still functioning. Application errors or infrastructure failures can cause downtime, but an administrator will eventually need to shut down applications for patching, version upgrades, or to deploy new features.
+- There are three availability solutions to address app resilience. AS the availability factor of each solution increases, so does the complexity and cost.
+- Fault tolerant hardware: A system designed by building multiples of all critical components into the same computer.
+- Cluster Architecture: A group of servers acting like a single system.
+- Backup and restore: Copying files for the purpose of being able to restore them if data loss occurs.
+
+### System and Data Backups
+- An organization can lose data if cybercriminals steal it, if equipment fails, or if a disaster or other error occurs, so it’s important to back up data regularly.
+- A data backup stores a copy of the information from a computer to backup media. When such media is removable, the operator then stores this backup media in a safe place.
+- Backing up data is one of the most effective ways of protecting against data loss. If the hardware fails, the user can restore the data from the backup once the system is functional again, or even when moving to a new system.
+- Frequency: Recommended to make full backups monthly or weekly and then do frequent partial backups. However, having many partial backups increases the amount of time needed to restore the data.
+- Storage: For extra security, transport backups to an approved off-site storage.
+- Security: Protect backups with passwords
+- validation: Validade backups to ensure integrity.
+
+### Designing High Availability Systems
+- High availability incorporates three major principles to achieve the goal of uninterrupted access to data and services.
+  - Elimination or Reduction of Single Points of Failure
+  - Fault Tolerance
+  - System REsiliency
+ 
+### Power
+- A critical issue in protecting information systems is electrical power systems and power considerations. A continuous supply of electrical power is essential for today’s massive server and data storage facilities.
+- Here are some general rules in building effective electrical supply systems:
+  - Data centers should be on a different power supply from the rest of the building.
+  - Use redundant power sources — two or more feeds coming from two or more electrical substations.
+  - Implement power conditioning.
+  - Backup power systems
+  - UPS available
+  - Power Excess: Spike a momoentary high voltage and Surge a prolonged high voltage
+  - Power Loss, caused by a Fault or Blackout
+  - Power Degradation: Sag/dip a momentary low voltage. Brownout, a prolonged low voltage. Inrush current , a initial surge of power.
+
+### Heating, Ventilation and Air Conditioning
+- HVAC systems are critical to the safety of people and information systems in an organization's facilities. When designing modern IT facilities, these systems play a very important role in the overall stability and security.
+
+## Embedded and Specialized Systems
+
+### Threats to Key Industry Sectors
+- Over the last decade, cyber attacks like Stuxnet proved that malware attacks could successfully destroy or interrupt critical infrastructures. The Stuxnet worm targeted Supervisory Control And Data Acquisition (SCADA) systems used to control and monitor industrial processes. SCADA and other Industrial Control Systems (ICSs) are used in manufacturing, production, energy and communications systems.
+
+### The Emergence of IoT
+- The Internet of Things (IoT) is the collection of technologies that enable various devices to connect to the Internet. The technological evolution associated with IoT is changing commercial and consumer environments.
+- IoT technologies enable people to connect billions of devices, such as cars, industrial machines, robots, appliances, locks, motors and entertainment devices, to name just a few. This technology affects the amount of data that needs to be protected. As users need to access these devices remotely, they are placed online, which increases the number of potential entry points to that local network in general.
+- Moreover, with the emergence of IoT, there is much more data to be managed and secured. All these devices, plus the expanded storage capacity and storage services offered through the cloud and virtualization, have led to the exponential growth of data. This data expansion created a new area of interest in technology and business called ‘Big Data.’
+- IoT devices greatly expand the cyber attack surface. In the IoT, thousands of new devices require access to networks in order to submit data and be managed and operated. Internet-connected smart devices have been infected with malware and used to launch some of the largest DDoS attacks in history. Therefore, IoT device security is extremely important. First, all IoT devices should be evaluated to ensure that they are able to update their firmware with security patches, preferably over wireless networks. In addition, default administrator credentials on these devices should always be changed from the default settings because these settings are publicly known.
+
+### Embedded Systems
+- Embedded systems capture, store and access data. They pose unique security challenges due to their widespread adoption by both the corporate and the consumer world. They are used in smart TVs, HVAC control systems, medical devices and even automobiles.
+- One technique to protect these devices from side-channel attacks, is to use System on Chip SOC technology.
+- Thios is a SFF hardware module, such as the raspberry pi or Arduino.
+- These are single-board computers that can be implmeneted using a Field-Programmable Gate Array, an integrad circuit that can be programmed or modified in the field. Meaning the user can make changes after deploying the device.
+- SoC integrates a microcontroller, an application or microprocessor and peripherals such as a GPU, a WI-fi module or a coprocessor. These can run many different OS.
+- These however, have poor authentication and are not upgraded or patched, requiring a degree of trust.
+- These devices can use a Real Time Operating System RTOS, a small OS that allows for rapid switching of tasks, than ofcus on timing, rather than throughput. They run with precise timing and high reliability.
+- However, they have some vulnerabilities, such as Code Injection, DoS attacks and priority inversion.
+
+### VoIP Equipment
+- Uses internet to make and receive phone calls.
+- It requires an internet connection and a phone for VoIP.
+- A traiditional phone with an adapter (the adapter acts as a hardware interface, between a traditional anlog phone and a digital VoIP line)
+- A VoIP enabled phone
+- VoIP software installed on a computer.
+- VoIP security is only as reliable as the underlying network security.
+- Cybercriminals target these systems to gain access to free phone services, to eavesdrop on phone calls, or to affect performance and availability
+- To protect VoIP, you can:
+  - Encrypt voice message packets to protect against eavesdropping.
+  - Use SSH to protect gateways and switches.
+  - Change the default passwords
+  - Use an intrusion detection system to detect attacks such as ARP poisoning.
+  - USe strong authentication to mitigate registration spoofing. cybercriminals routing all incoming calls for the victim to themselves),
+  - proxy impersonating (tricking the victim into communicating via a rogue proxy set up by the cybercriminals)
+  - and call hijacking (intercepting and rerouting calls to a different path before reaching their destination)
+  - Implement firewalls that recognize VoIP to monitor streams and filter abnormal signals.
