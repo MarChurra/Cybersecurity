@@ -141,3 +141,11 @@
 - The server looks up the user's private key and creates an HMAC.
 - The user;s HMAC must match the one calculated by the server.
 - VPNs using IPsec rely on HHMAC functions to authenticate the origin of every packet and provide data integrity checking.
+
+### AAA Operation
+- A network must be designed to control who is allowed to connect to it and what they are allowed to do when they are connected. These design requirements are identified in the network security policy.
+- The policy specifies how network administrators, corporate users, remote users, business partners, and clients access network resources. The network security policy can also mandate the implementation of an accounting system that tracks who logged in and when and what they did while logged in. Some compliance regulations may specify that access must be logged and the logs retained for a set period of time.
+- The Authentication, Authorization, and Accounting (AAA) protocol provides the necessary framework to enable scalable access security.
+- It can be a Local (router) or a Server-Based  (Centralized AAA) AAA Authentication.
+- Devices communicate witht he centralized AAA server using either the RADIUS or TACACS+ Protocols
+- 
