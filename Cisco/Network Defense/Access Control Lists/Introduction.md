@@ -98,4 +98,17 @@
 ### Where to Place ACLs
 - Extended ACLs shoudl be located as close as possible to the source of the fraffic to be filtered. This way, undersirable traffic is denied close to the source network without crossing the network infrastructure.
 - Standard ACLs should be located as close to the destinatio. If a standard ACL was placed at the soruce of the traffic, the permit or deny will occur based on the given source address, no matter where the traffic is destined.
-- 
+
+## Mitigating ATtacks with ACLs
+
+### Mitigate Spoofing Attacks
+- ACLs can be used to mitigate many network threats, such as IP address spoofing and denial of service (DoS) attacks. Most DoS attacks use some type of spoofing. IP address spoofing overrides the normal packet creation process by inserting a custom IP header with a different source IP address. Attackers can hide their identity by spoofing the source IP address.
+- There are many well-known classes of IP addresses that should never be seen as source IP addresses for traffic entering an organization’s network. For example, in the figure the S0/0/0 interface is attached to the internet and should never accept inbound packets from the following addresses:
+- All zero Addresses
+- Broadcast addresses
+- Local host addresses
+- Automatic Private IP Addressing addresses (169.245.0.0/16)
+- IP Multicast address range
+- Reserved Private Address
+
+  
