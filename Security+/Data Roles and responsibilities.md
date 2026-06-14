@@ -1,0 +1,23 @@
+- High-level data relationships
+  - Organizational responsibilities, not always technical
+- Data owner
+  - Accountable for specific data, often a senior officer
+  - VP of sales owns the customer relationship data
+  - Treasures owns the financial information
+
+## Data roles
+- Data controller
+  - Manages the purposes and means by which personal data is processed
+- Data processor
+  - Processes data on behalf of the data controller
+  - Often a third-party or different group
+- Payroll controller and processor
+  - Payroll departements (data controller), defines payroll amounts and timefgrames
+  - Payroll company (data processor) processes payroll and stores employee information
+- Data custodian/steward
+  - Responsible for data accuracy, privacy and security
+- Works directly with the data
+  - Associates sensitivy labels to the data
+  - Ensures compliance with any applicable laws and standards
+  - Manages the acces srights to the data
+  - Implement security controls 
